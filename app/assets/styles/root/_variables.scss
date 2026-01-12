@@ -1,0 +1,39 @@
+@use "sass:color";
+$font: "Montserrat", sans-serif;
+$heading-font: $font;
+$code-font: "Source Code Pro", monospace;
+$icon-font: "";
+
+$font-size: 1.1rem;
+
+$lead: calc($font-size * 1.234);
+$secondary: calc($font-size / 1.125);
+$third: calc($font-size / 1.255);
+
+$primary-color: #c41e3a;
+$secondary-color: #e8e8e8;
+$text-dark: #333333;
+$text-light: #ffffff;
+$border-color: #cccccc;
+$shadow: rgba(0, 0, 0, 0.1);
+
+// Informaton colors
+$error-color: #ba221d;
+$alert-color: #bd912f;
+$success-color: #3f913a;
+
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+
+$border-radius: 8px;
+$transition: all 0.3s ease;
+
+$button-background: color.adjust($primary-color, $lightness: -5%);
+$button-color: $primary-color;
+
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;

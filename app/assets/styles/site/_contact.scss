@@ -1,0 +1,65 @@
+@use "sass:color";
+@use "../root/" as *;
+
+/* Form Container */
+.form-wrapper {
+ max-width: 450px;
+ margin: $spacing-md auto;
+ padding: $spacing-md;
+ border-radius: 12px;
+ background: $text-light;
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+ h2 {
+  color: $primary-color;
+  margin-bottom: $spacing-sm;
+ }
+
+ p {
+  color: $text-dark !important;
+  font-size: 1.1rem !important;
+  margin-bottom: $spacing-sm !important;
+ }
+}
+
+/* Inputs & Textarea */
+.input-field {
+ margin-top: 12px;
+ margin-bottom: 12px;
+}
+
+/* Buttons */
+.btn {
+ @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+ margin-top: 1.5rem;
+}
+.btn:disabled {
+ background-color: #94a3b8;
+ cursor: not-allowed;
+}
+
+/* Feedback Messages */
+.err-text {
+ color: $error-color;
+ font-size: 0.95rem;
+ margin-top: 4px;
+}
+
+.toast {
+ background: $success-color;
+ color: white;
+ padding: 12px;
+ border-radius: 8px;
+ text-align: center;
+ margin-top: 1.1rem;
+}
+
+/* Transitions */
+.fade-enter-active,
+.fade-leave-active {
+ transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+ opacity: 0;
+}

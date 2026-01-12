@@ -1,0 +1,58 @@
+@use "../root/" as *;
+
+.newsletter-wrapper {
+ max-width: 700px;
+ margin: 0 auto $spacing-xxl auto;
+ padding: 48px 32px;
+ background: #f9fafb; /* Light neutral background */
+ border: 1px solid #e5e7eb;
+ border-radius: 16px;
+ text-align: center;
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+ h3 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 12px;
+  font-weight: 700;
+ }
+
+ .description {
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+ }
+
+ form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  align-items: center;
+ }
+
+ .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  justify-content: center;
+ }
+
+ input[type="email"] {
+  width: 100%;
+  margin-top: 8px;
+ }
+
+ p {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #059669; /* Success green */
+  font-weight: 500;
+ }
+}
+
+/* Mobile Responsiveness */
+@media (min-width: 480px) {
+ input[type="email"] {
+  max-width: 350px;
+ }
+}

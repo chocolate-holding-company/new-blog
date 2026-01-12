@@ -1,0 +1,86 @@
+// ===============================================
+// Tables
+// Finished format or tweak to your liking
+// ===============================================
+
+@use "../root/" as *;
+
+table {
+ width: 95%;
+ margin: $spacing-md auto;
+ background-color: transparent;
+
+ caption {
+  font-size: $font-size;
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: bold;
+ }
+
+ th,
+ td {
+  padding: 0.7rem;
+  vertical-align: top;
+  border-top: 1px solid $text-dark;
+  font-size: $secondary;
+  line-height: 1.5;
+  color: black;
+  text-align: left;
+ }
+
+ th {
+  font-weight: bold;
+ }
+
+ thead th {
+  vertical-align: bottom;
+ }
+}
+
+//Table hovers
+tbody tr td,
+tbody tr th {
+ transition: background-color $transition;
+}
+
+@media (hover: hover) {
+ tbody tr:hover td,
+ tbody tr:hover th {
+  background-color: rgb(236, 230, 230);
+ }
+}
+
+// CONDENSED ============================
+.table-condensed {
+ th,
+ td {
+  padding: 0.2rem 0.25rem;
+ }
+}
+
+// BORDERED ============================
+.table-bordered {
+ border: 1px solid $text-dark;
+ border-left: 0;
+ border-collapse: separate;
+
+ th,
+ td {
+  border-left: 1px solid $text-dark;
+ }
+
+ thead:first-child tr:first-child th,
+ tbody:first-child tr:first-child th,
+ tbody:first-child tr:first-child td {
+  border-top: 0;
+ }
+}
+
+// STRIPED ============================
+.table-striped {
+ tbody tr:nth-child(odd) td,
+ tbody tr:nth-child(odd) th {
+  background-color: rgb(236, 230, 230);
+ }
+}

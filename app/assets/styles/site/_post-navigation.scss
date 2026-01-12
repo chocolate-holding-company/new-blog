@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "../root/" as *;
+
+.post-navigation {
+ max-width: 800px;
+ margin: 0 auto;
+ padding-bottom: $spacing-xxl;
+
+ @media (max-width: $breakpoint-mobile) {
+  padding-bottom: $spacing-xl;
+ }
+
+ .back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-sm $spacing-md;
+  background-color: $secondary-color;
+  color: $text-dark;
+  border-radius: $border-radius;
+  font-weight: 500;
+  transition: $transition;
+
+  &:hover {
+   background: color.adjust($secondary-color, $lightness: -5%);
+   transform: translateX(-4px);
+  }
+
+  svg {
+   transition: $transition;
+  }
+ }
+}

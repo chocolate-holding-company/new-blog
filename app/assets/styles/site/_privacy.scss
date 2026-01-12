@@ -1,0 +1,38 @@
+@use "../root/" as *;
+
+.privacy-wrap {
+ color: black;
+ padding: $spacing-md 0 0 0;
+ h2 {
+  margin-bottom: $spacing-md;
+ }
+ h3 {
+  margin-bottom: $spacing-xs;
+ }
+ p {
+  text-align: left;
+  margin-bottom: $spacing-md !important;
+  font-size: 1.1rem !important;
+ }
+ ul {
+  margin-bottom: $spacing-md;
+ }
+ p:has(+ ul) {
+  margin-bottom: $spacing-xs !important;
+ }
+ li {
+  text-align: left;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  list-style-type: circle;
+  margin-left: 0.5rem;
+ }
+ .third {
+  font-size: 0.9rem !important;
+ }
+}
+@media (min-width: 640px) {
+ .privacy-wrap {
+  padding: $spacing-md 30px 0 30px;
+ }
+}

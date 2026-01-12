@@ -1,0 +1,150 @@
+@use "../root/" as *;
+html {
+ scroll-behavior: smooth;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: $font;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ color: $text-dark;
+ line-height: 1.6;
+ background-color: #ffffff;
+}
+
+a {
+ text-decoration: none;
+ color: inherit;
+ transition: $transition;
+}
+
+button,
+.btn {
+ cursor: pointer;
+ border: none;
+ background: none;
+ font-family: inherit;
+ transition: $transition;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+}
+
+.container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 $spacing-md;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ line-height: 1.2;
+ margin-bottom: $spacing-md;
+ font-family: $heading-font;
+}
+
+h1 {
+ font-size: 2rem;
+ @include media(768) {
+  font-size: 2.5rem;
+ }
+}
+
+h2 {
+ font-size: 1.75rem;
+ @include media(768) {
+  font-size: 2rem;
+ }
+}
+
+h3 {
+ font-size: 1.5rem;
+}
+
+p {
+ margin-bottom: $spacing-md;
+}
+
+input,
+textarea {
+ width: 100%;
+ padding: 14px 18px;
+ border: 1px solid #e2e8f0;
+ border-radius: $border-radius;
+ font-size: 1rem;
+ transition:
+  border-color 0.2s,
+  box-shadow 0.2s;
+}
+
+.input-field:focus {
+ outline: none;
+ border-color: #3b82f6;
+ border-width: 2px;
+ box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* If JS is disabled, show the cards immediately */
+.no-js .post-card {
+ opacity: 1;
+ transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+ /* Disable the reveal animations */
+ .post-card {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+ }
+
+ /* Disable the smooth scroll behavior */
+ html {
+  scroll-behavior: auto !important;
+ }
+
+ /* Disable the back-to-top button animation */
+ .back-to-top {
+  transition: none !important;
+ }
+}
+
+//error page
+// .error-wrap {
+//  margin: $spacing-xxl auto;
+//  text-align: center;
+//  h3 {
+//   font-size: 7rem;
+//   color: rgb(167, 37, 37);
+//   margin-bottom: 0;
+//  }
+
+//  p {
+//   font-size: 3rem;
+//   color: rgb(167, 37, 37);
+//   font-weight: 700;
+//   margin-bottom: 20px;
+//   letter-spacing: 2px;
+//  }
+//  button {
+//   padding: 10px;
+//   font-size: 1.4rem;
+//   &:hover {
+//    color: rgb(167, 37, 37);
+//   }
+//  }
+// }
