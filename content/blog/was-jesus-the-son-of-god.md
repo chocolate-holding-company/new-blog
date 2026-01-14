@@ -1,3 +1,7 @@
+::IntroPara
+The content of the introPara - The question of whether Jesus existed is generally divided into two parts. The question of whether Jesus existed is generally divided into two parts
+::
+
 The question of whether Jesus existed is generally divided into two parts by historians: the **"Jesus of history"** (the man who lived in 1st-century Judea) and the **"Christ of faith"** (the Son of God as defined by Christian theology).
 
 The overwhelming consensus among modern historians, both Christian and secular, is that **Jesus of Nazareth was a real historical figure** who lived and died in the first century.
@@ -25,6 +29,8 @@ The New Testament is the primary source of information, but historians different
 
 - **Pauline Epistles (Letters of Paul):** These are the **earliest surviving Christian writings** (dating from the 50s and 60s AD, only about 20-30 years after Jesus's death). Paul claims to have met and interacted with eyewitnesses, including Jesus's brother, **James**, and his closest disciples, Peter and John, treating Jesus as a real person.
 - **The Gospels:** Matthew, Mark, Luke, and John are considered ancient biographies written in the style of the time, primarily focused on recounting the life, ministry, death, and resurrection of Jesus. Historians use various criteria (like the **criterion of embarrassment**—details embarrassing to the early church, like his baptism by John) to separate historical memory from theological tradition.
+
+![](/images/is-jesus-son-of-god.webp)
 
 ### 2. The Claim of "Son of God"
 

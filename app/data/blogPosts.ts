@@ -1,5 +1,19 @@
 export const blogPosts = [
  {
+  _path: "/blog/markdown-guide",
+  title: "A Guide to Markdown",
+  description:
+   "Markdown guide showing all the tags and goodness of Markdown and why you should use it for all your blog writing.",
+  seo_description:
+   "Markdown guide showing all the tags and goodness of Markdown this is seo description.",
+  image:
+   "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800",
+  category: "Beginner",
+  date: "2026-09-11",
+  author: "Howard Lucas",
+ },
+
+ {
   _path: "/blog/beginners",
   title: "Beginner's Guide to Hill Walking",
   description:
@@ -37,6 +51,8 @@ export const blogPosts = [
   title: "Git Cheat-Sheet",
   description:
    "Build the strength and endurance needed to tackle challenging hill walks with confidence.",
+  seo_description:
+   "Markdown guide showing all the tags and goodness of Markdown this is seo description.",
   image:
    "https://images.pexels.com/photos/4662343/pexels-photo-4662343.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Fitness",

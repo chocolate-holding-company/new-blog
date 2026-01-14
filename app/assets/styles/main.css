@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:wght@400&display=swap");
 .btn-primary {
   display: inline-block;
-  padding: 16px 24px;
   border: 2px solid #c41e3a;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   background-color: transparent;
@@ -23,11 +21,9 @@
 
 .btn-success {
   display: inline-block;
-  padding: 16px 24px;
   border: 2px solid #c41e3a;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   background-color: #2ecc71;
@@ -67,6 +63,40 @@ a {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
+}
+
+i,
+em,
+dfn,
+cite,
+abbr,
+address {
+  font-style: italic;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted gray;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: rgb(221, 215, 215);
+  text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+  font-family: "Source Code Pro", monospace;
+}
+
+del {
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
 }
 
 button,
@@ -134,6 +164,7 @@ textarea {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -142,6 +173,11 @@ textarea {
   border-color: #3b82f6;
   border-width: 2px;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* If JS is disabled, show the cards immediately */
@@ -303,16 +339,15 @@ tbody tr th {
 }
 .filter-section .filter-btn {
   display: inline-block;
-  padding: 16px 24px;
   border: 2px solid #c41e3a;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   background-color: transparent;
   color: #c41e3a;
   transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  padding: 8px 10px;
 }
 .filter-section .filter-btn:hover {
   background-color: #c41e3a;
@@ -375,9 +410,9 @@ tbody tr th {
   right: 24px;
   background-color: #c41e3a;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 5px 10px;
   border-radius: 8px;
-  font-size: 0.875rem;
+  font-size: 0.775rem;
   font-weight: 600;
 }
 .post-card .home-post-content {
@@ -390,7 +425,7 @@ tbody tr th {
   line-height: 1.4;
 }
 .post-card .home-post-content .post-description {
-  color: #666;
+  color: #383737;
   margin-bottom: 24px;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -419,16 +454,15 @@ tbody tr th {
 }
 .load-more-section .load-more-btn {
   display: inline-block;
-  padding: 16px 24px;
   border: 2px solid #c41e3a;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   background-color: transparent;
   color: #c41e3a;
   transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  padding: 8px 10px;
 }
 .load-more-section .load-more-btn:hover {
   background-color: #c41e3a;
@@ -492,7 +526,7 @@ tbody tr th {
   display: inline-block;
   background-color: #c41e3a;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 5px 10px;
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -515,7 +549,7 @@ tbody tr th {
 }
 @media (max-width: 768px) {
   .post-header .post-header-image .post-header-overlay .post-header-content .post-description {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 .post-header .post-header-image .post-header-overlay .post-header-content .post-meta {
@@ -551,7 +585,7 @@ tbody tr th {
 }
 
 .post-content {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 48px 0;
   border-bottom: 1px solid #333333;
@@ -595,9 +629,44 @@ tbody tr th {
 }
 .post-content p {
   margin-bottom: 24px;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #444;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+.post-content .intro-para {
+  border-block: 2px solid blue;
+  padding: 25px;
+  padding-bottom: 0;
+  margin: 16px 24px 32px 24px;
+}
+.post-content .intro-para p {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+}
+@media only screen and (min-width: 700px) {
+  .post-content p {
+    font-size: 1.2rem;
+  }
+  .post-content .intro-para {
+    margin: 32px 24px 64px 24px;
+  }
+  .post-content .intro-para p {
+    font-size: 28px;
+  }
+}
+.post-content figure,
+.post-content img {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.post-content figure img {
+  margin-bottom: 0;
+}
+.post-content figcaption {
+  text-align: center;
+  margin-top: 16px;
+  font-style: italic;
 }
 .post-content ul,
 .post-content ol {
@@ -657,7 +726,7 @@ tbody tr th {
 }
 
 .post-navigation {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding-bottom: 64px;
 }
@@ -670,15 +739,17 @@ tbody tr th {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 16px 24px;
-  background-color: #e8e8e8;
-  color: #333333;
+  padding: 5px 10px;
+  border: 2px solid #c41e3a;
+  color: #c41e3a;
   border-radius: 8px;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 .post-navigation .back-button:hover {
-  background: rgb(219.25, 219.25, 219.25);
+  background: rgb(173.8849557522, 26.6150442478, 51.4557522124);
+  color: #ffffff;
   transform: translateX(-4px);
 }
 .post-navigation .back-button svg {
@@ -696,10 +767,15 @@ tbody tr th {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 .newsletter-wrapper h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #111827;
   margin-bottom: 12px;
   font-weight: 700;
+}
+@media only screen and (min-width: 700px) {
+  .newsletter-wrapper h3 {
+    font-size: 2rem;
+  }
 }
 .newsletter-wrapper .description {
   color: #4b5563;
@@ -803,15 +879,13 @@ tbody tr th {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 .comments-container .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .comments-container .submit-btn {
   display: inline-block;
-  padding: 16px 24px;
   border: 2px solid #c41e3a;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   background-color: transparent;
@@ -820,6 +894,11 @@ tbody tr th {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .comments-container .submit-btn:hover {
   background-color: #c41e3a;
@@ -829,34 +908,34 @@ tbody tr th {
 .comments-container .submit-btn:active {
   transform: scale(0.98);
 }
+@media only screen and (min-width: 700px) {
+  .comments-container .submit-btn {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+}
 .comments-container .submit-btn:disabled {
-  background-color: #94a3b8;
+  background-color: #c41e3a;
   cursor: not-allowed;
 }
 .comments-container .message {
   text-align: center;
-  margin-top: 1rem;
+  color: white;
+  margin-top: 1.1rem;
   padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 .comments-container .error-message {
-  background: #fff5f5;
-  color: #c53030;
-  border: 1px solid #feb2b2;
+  background: #ba221d;
 }
 .comments-container .success-message {
-  background: #f0fff4;
-  color: #2f855a;
-  border: 1px solid #9ae6b4;
+  background: #3f913a;
 }
 .comments-container .hidden-field {
   display: none;
 }
 
-/* Admin Reply */
-/* Form Styling */
-/* Status Messages */
 .footer {
   background-color: #333333;
   color: #ffffff;
@@ -920,8 +999,13 @@ tbody tr th {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 24px;
+  padding: 16px;
   animation: fadeIn 0.4s ease-in-out;
+}
+@media only screen and (min-width: 600px) {
+  .modal-overlay {
+    padding: 24px;
+  }
 }
 
 @keyframes fadeIn {
@@ -935,7 +1019,7 @@ tbody tr th {
 .modal-content {
   background: #f9fafb; /* Light neutral background */
   border-radius: 8px;
-  padding: 32px;
+  padding: 48px 32px;
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
@@ -943,9 +1027,10 @@ tbody tr th {
   position: relative;
   animation: slideUp 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .modal-content {
-    padding: 24px;
+    padding: 0;
+    background: #ffffff;
   }
 }
 
@@ -961,8 +1046,8 @@ tbody tr th {
 }
 .close-button {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   background: none;
   border: none;
   color: #333333;
@@ -984,12 +1069,17 @@ body.no-scroll {
 
 /* Form Container */
 .form-wrapper {
-  max-width: 450px;
+  max-width: 550px;
   margin: 24px auto;
-  padding: 24px;
+  padding: 32px;
   border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Feedback Messages */
+}
+@media only screen and (min-width: 700px) {
+  .form-wrapper {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
 }
 .form-wrapper h2 {
   color: #c41e3a;
@@ -999,6 +1089,20 @@ body.no-scroll {
   color: #333333 !important;
   font-size: 1.1rem !important;
   margin-bottom: 16px !important;
+}
+.form-wrapper .err-text {
+  color: #ba221d !important;
+  font-size: 0.95rem !important;
+  font-weight: 500;
+  margin-top: 4px;
+}
+.form-wrapper .toast {
+  background: #3f913a;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1.1rem;
 }
 
 /* Inputs & Textarea */
@@ -1010,17 +1114,17 @@ body.no-scroll {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 16px 24px;
   border: 2px solid #c41e3a;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
   background-color: transparent;
   color: #c41e3a;
   transition: transform 0.2s ease-in-out, background-color 0.3s ease;
   margin-top: 1.5rem;
+  padding: 8px 16px;
+  font-size: 0.9rem;
 }
 .btn:hover {
   background-color: #c41e3a;
@@ -1030,26 +1134,16 @@ body.no-scroll {
 .btn:active {
   transform: scale(0.98);
 }
+@media only screen and (min-width: 700px) {
+  .btn {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+}
 
 .btn:disabled {
   background-color: #94a3b8;
   cursor: not-allowed;
-}
-
-/* Feedback Messages */
-.err-text {
-  color: #ba221d;
-  font-size: 0.95rem;
-  margin-top: 4px;
-}
-
-.toast {
-  background: #3f913a;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 1.1rem;
 }
 
 /* Transitions */
@@ -1065,7 +1159,7 @@ body.no-scroll {
 
 .privacy-wrap {
   color: black;
-  padding: 24px 0 0 0;
+  padding: 48px 32px;
 }
 .privacy-wrap h2 {
   margin-bottom: 24px;
@@ -1095,8 +1189,8 @@ body.no-scroll {
   font-size: 0.9rem !important;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 700px) {
   .privacy-wrap {
-    padding: 24px 30px 0 30px;
+    padding: 24px 32px 0 32px;
   }
 }

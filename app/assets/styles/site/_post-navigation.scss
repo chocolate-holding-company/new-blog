@@ -2,7 +2,7 @@
 @use "../root/" as *;
 
 .post-navigation {
- max-width: 800px;
+ max-width: 960px;
  margin: 0 auto;
  padding-bottom: $spacing-xxl;
 
@@ -14,15 +14,17 @@
   display: inline-flex;
   align-items: center;
   gap: $spacing-xs;
-  padding: $spacing-sm $spacing-md;
-  background-color: $secondary-color;
-  color: $text-dark;
+  padding: 5px 10px;
+  border: 2px solid $primary-color;
+  color: $primary-color;
   border-radius: $border-radius;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: $transition;
 
   &:hover {
-   background: color.adjust($secondary-color, $lightness: -5%);
+   background: color.adjust($primary-color, $lightness: -5%);
+   color: $text-light;
    transform: translateX(-4px);
   }
 

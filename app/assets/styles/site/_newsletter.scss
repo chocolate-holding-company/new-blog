@@ -11,10 +11,13 @@
  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
  h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #111827;
   margin-bottom: 12px;
   font-weight: 700;
+  @include media(700) {
+   font-size: 2rem;
+  }
  }
 
  .description {

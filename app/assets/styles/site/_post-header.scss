@@ -57,7 +57,7 @@
      display: inline-block;
      background-color: $primary-color;
      color: $text-light;
-     padding: $spacing-xs $spacing-sm;
+     padding: 5px 10px;
      border-radius: $border-radius;
      font-size: 0.875rem;
      font-weight: 600;
@@ -80,7 +80,7 @@
      opacity: 0.95;
 
      @media (max-width: $breakpoint-mobile) {
-      font-size: 1rem;
+      font-size: 1.05rem;
      }
     }
 

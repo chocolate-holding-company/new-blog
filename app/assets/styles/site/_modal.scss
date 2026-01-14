@@ -11,8 +11,11 @@
  align-items: center;
  justify-content: center;
  z-index: 1000;
- padding: $spacing-md;
+ padding: $spacing-sm;
  animation: fadeIn 0.4s ease-in-out;
+ @include media(600) {
+  padding: $spacing-md;
+ }
 }
 
 @keyframes fadeIn {
@@ -27,7 +30,7 @@
 .modal-content {
  background: #f9fafb; /* Light neutral background */
  border-radius: $border-radius;
- padding: $spacing-lg;
+ padding: $spacing-xl $spacing-lg;
  max-width: 600px;
  width: 100%;
  max-height: 90vh;
@@ -35,8 +38,9 @@
  position: relative;
  animation: slideUp 0.3s ease;
 
- @media (max-width: $breakpoint-mobile) {
-  padding: $spacing-md;
+ @media (max-width: 700px) {
+  padding: 0;
+  background: $text-light;
  }
 }
 
@@ -53,8 +57,8 @@
 
 .close-button {
  position: absolute;
- top: $spacing-md;
- right: $spacing-md;
+ top: $spacing-sm;
+ right: $spacing-sm;
  background: none;
  border: none;
  color: $text-dark;

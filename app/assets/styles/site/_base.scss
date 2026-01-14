@@ -25,6 +25,39 @@ a {
  transition: $transition;
 }
 
+i,
+em,
+dfn,
+cite,
+abbr,
+address {
+ font-style: italic;
+}
+
+abbr,
+acronym {
+ border-bottom: 1px dotted gray;
+ cursor: help;
+}
+
+mark,
+ins {
+ background: rgb(221, 215, 215);
+ text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+ font-family: $code-font;
+}
+
+del {
+ text-decoration-color: red;
+}
+
 button,
 .btn {
  cursor: pointer;
@@ -86,6 +119,7 @@ textarea {
  border: 1px solid #e2e8f0;
  border-radius: $border-radius;
  font-size: 1rem;
+ font-family: $font;
  transition:
   border-color 0.2s,
   box-shadow 0.2s;
@@ -96,6 +130,11 @@ textarea {
  border-color: #3b82f6;
  border-width: 2px;
  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
 }
 
 /* If JS is disabled, show the cards immediately */
@@ -122,29 +161,3 @@ textarea {
   transition: none !important;
  }
 }
-
-//error page
-// .error-wrap {
-//  margin: $spacing-xxl auto;
-//  text-align: center;
-//  h3 {
-//   font-size: 7rem;
-//   color: rgb(167, 37, 37);
-//   margin-bottom: 0;
-//  }
-
-//  p {
-//   font-size: 3rem;
-//   color: rgb(167, 37, 37);
-//   font-weight: 700;
-//   margin-bottom: 20px;
-//   letter-spacing: 2px;
-//  }
-//  button {
-//   padding: 10px;
-//   font-size: 1.4rem;
-//   &:hover {
-//    color: rgb(167, 37, 37);
-//   }
-//  }
-// }

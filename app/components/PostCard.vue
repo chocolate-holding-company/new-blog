@@ -25,7 +25,7 @@ const formatDate = (dateString: string) => {
   month: "long",
   day: "numeric",
  };
- return new Date(dateString).toLocaleDateString("en-US", options);
+ return new Date(dateString).toLocaleDateString("en-GB", options);
 };
 
 onMounted(() => {

@@ -79,6 +79,7 @@
 
  .filter-btn {
   @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+  padding: 8px 10px;
 
   &.active {
    background-color: $primary-color;
@@ -136,9 +137,10 @@
    right: $spacing-md;
    background-color: $primary-color;
    color: $text-light;
-   padding: $spacing-xs $spacing-sm;
+   //padding: $spacing-xs $spacing-sm;
+   padding: 5px 10px;
    border-radius: $border-radius;
-   font-size: 0.875rem;
+   font-size: 0.775rem;
    font-weight: 600;
   }
  }
@@ -154,7 +156,7 @@
   }
 
   .post-description {
-   color: #666;
+   color: #383737;
    margin-bottom: $spacing-md;
    font-size: 0.95rem;
    line-height: 1.6;
@@ -187,5 +189,6 @@
 
  .load-more-btn {
   @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+  padding: 8px 10px;
  }
 }

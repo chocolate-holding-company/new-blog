@@ -1,9 +1,9 @@
-import { Firestore } from "firebase/firestore";
+// import { Firestore } from "firebase/firestore";
 
-declare module "#app" {
- interface NuxtApp {
-  $db: Firestore;
- }
-}
+// declare module "#app" {
+//  interface NuxtApp {
+//   $db: Firestore;
+//  }
+// }
 
-export {};
+// export {};

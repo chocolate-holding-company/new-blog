@@ -2,7 +2,7 @@
 
 .privacy-wrap {
  color: black;
- padding: $spacing-md 0 0 0;
+ padding: $spacing-xl $spacing-lg;
  h2 {
   margin-bottom: $spacing-md;
  }
@@ -31,8 +31,8 @@
   font-size: 0.9rem !important;
  }
 }
-@media (min-width: 640px) {
+@media (min-width: 700px) {
  .privacy-wrap {
-  padding: $spacing-md 30px 0 30px;
+  padding: $spacing-md $spacing-lg 0 $spacing-lg;
  }
 }
