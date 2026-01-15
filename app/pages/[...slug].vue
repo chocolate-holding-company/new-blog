@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import BackToTop from "~/components/BackToTop.vue";
+import NavBar from "~/components/NavBar.vue";
 
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
@@ -11,7 +12,8 @@ const postId = computed(() => route.path);
 <template>
  <div>
   <ReadingProgressBar />
-  <div class="layout">
+  <NavBar />
+  <div class="layout" id="main-content">
    <main class="main-content">
     <div class="blog-post">
      <div class="blog-post">

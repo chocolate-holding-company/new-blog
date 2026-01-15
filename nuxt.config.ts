@@ -17,7 +17,7 @@ export default defineNuxtConfig({
    firebaseAppId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID,
   },
  },
- modules: ["@nuxt/content"],
+ modules: ["@nuxt/content", "@vueuse/nuxt"],
 
  css: ["~/assets/styles/main.css"],
  content: {
