@@ -25,17 +25,6 @@ export const blogPosts = [
   author: "Sarah Mitchell",
  },
  {
-  _path: "/about",
-  title: "Best Hill Walks for Autumn",
-  description:
-   "Discover stunning routes that showcase the beautiful autumn colors and crisp mountain air.",
-  image:
-   "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=800",
-  category: "Routes",
-  date: "2024-10-20",
-  author: "Michael Chen",
- },
- {
   _path: "/blog/command-line",
   title: "Command Line Cheat Sheet",
   description:
@@ -121,6 +110,16 @@ export const blogPosts = [
   image: "/images/is-jesus-son-of-god.webp",
   category: "Routes",
   date: "2024-12-08",
+  author: "Howard Lucas",
+ },
+ {
+  _path: "/blog/pedal-to-israel",
+  title: "Pedal to Israel",
+  description:
+   "Historians distinguish between the Jesus of history, a real man in 1st-century Judea, and the Christ of faith, the divine figure of Christian theology",
+  image: "/images/israel-header.png",
+  category: "Routes",
+  date: "2026-01-24",
   author: "Howard Lucas",
  },
 ];

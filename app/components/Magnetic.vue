@@ -39,7 +39,7 @@ const handleMouseLeave = () => {
 
 <style scoped>
 .magnetic-wrap {
- display: inline-block;
+ display: block;
  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
  will-change: transform;
 }
