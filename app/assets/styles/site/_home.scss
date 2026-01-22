@@ -168,17 +168,11 @@
   }
 
   .post-meta {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
    font-size: 0.875rem;
    color: #999;
    padding-top: $spacing-sm;
    border-top: 1px solid $secondary-color;
-
-   .post-author {
-    font-weight: 500;
-   }
+   font-weight: 500;
   }
  }
 }

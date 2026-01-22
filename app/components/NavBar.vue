@@ -4,10 +4,6 @@
  >
   <div class="nav-container">
    <Magnetic>
-    <NuxtLink to="/" class="logo" @click="closeMenu">bylucas</NuxtLink>
-   </Magnetic>
-
-   <Magnetic>
     <button @click="toggleMenu" :class="['hamburger', { active: isMenuOpen }]">
      <span class="line"></span>
      <span class="line"></span>
@@ -18,28 +14,46 @@
   <Transition name="overlay">
    <div v-if="isMenuOpen" class="menu-overlay" @click="handleOverlayClick">
     <nav class="menu-links">
-     <div class="left-link">
-      <Magnetic v-for="(link, i) in left_links" :key="link.name">
-       <NuxtLink
-        :to="link.path"
-        class="nav-item"
-        :style="{ transitionDelay: `${(i + 1) * 0.1}s` }"
-        @click="closeMenu"
-       >
-        {{ link.name }}
-       </NuxtLink>
+     <div class="links-column left-links">
+      <Magnetic
+       v-for="group in leftLinks"
+       :key="group.cat"
+       class="category-group"
+      >
+       <h3 class="category-title">{{ group.cat }}</h3>
+       <ul class="link-list">
+        <li v-for="item in group.links" :key="item.link_url">
+         <NuxtLink
+          :to="item.link_url"
+          class="menu-link"
+          :style="{ transitionDelay: `${(i + 1) * 0.1}s` }"
+          @click="closeMenu"
+         >
+          {{ item.link }}
+         </NuxtLink>
+        </li>
+       </ul>
       </Magnetic>
      </div>
-     <div class="right-link">
-      <Magnetic v-for="(link, i) in right_links" :key="link.name">
-       <NuxtLink
-        :to="link.path"
-        class="nav-item"
-        :style="{ transitionDelay: `${(i + 1) * 0.1}s` }"
-        @click="closeMenu"
-       >
-        {{ link.name }}
-       </NuxtLink>
+     <div class="links-column right-links">
+      <Magnetic
+       v-for="group in rightLinks"
+       :key="group.cat"
+       class="category-group"
+      >
+       <h3 class="category-title">{{ group.cat }}</h3>
+       <ul class="link-list">
+        <li v-for="item in group.links" :key="item.link_url">
+         <NuxtLink
+          :to="item.link_url"
+          class="menu-link"
+          :style="{ transitionDelay: `${(i + 1) * 0.1}s` }"
+          @click="closeMenu"
+         >
+          {{ item.link }}
+         </NuxtLink>
+        </li>
+       </ul>
       </Magnetic>
      </div>
     </nav>
@@ -49,7 +63,7 @@
 </template>
 
 <script setup>
-import { left_links, right_links } from "~/data/menu-links";
+import { leftLinks, rightLinks } from "~/data/menu-links";
 const route = useRoute();
 const isVisible = ref(true);
 const isMenuOpen = ref(false);

@@ -1,29 +1,72 @@
-export const left_links = [
- { name: "Home", path: "/" },
- { name: "Guide to Markdown", path: "/markdown-guide" },
- { name: "Pedal to Israel", path: "/blog/pedal-to-israel" },
+export const leftLinks = [
  {
-  name: "Is there any evidence that Jesus the son of God existed?",
-  path: "/blog/was-jesus-the-son-of-god",
+  cat: "Pages",
+  links: [{ link: "Home", link_url: "/" }],
  },
- { name: "Beginners Guide to Hill Walking", path: "/blog/beginners" },
- { name: "Command Line Cheat Sheet", path: "/blog/command-line" },
+ {
+  cat: "Advanced",
+  links: [
+   {
+    link: "Planning Your First Multi-Day Trek",
+    link_url: "/blog/planning-your-first-multi-day-trek",
+   },
+   { link: "About Walking", link_url: "/blog/about" },
+  ],
+ },
+ {
+  cat: "Beginner",
+  links: [
+   {
+    link: "A Guide to Markdown",
+    link_url: "/blog/markdown-guide",
+   },
+   { link: "Beginners Guide to Hill Walking", link_url: "/blog/beginners" },
+  ],
+ },
+ {
+  cat: "Fitness",
+  links: [{ link: "Git Cheat-Sheet", link_url: "/blog/git-cheat-sheet" }],
+ },
 ];
 
-export const right_links = [
- { name: "Git Cheat-Sheet", path: "/blog/git-cheat-sheet" },
- { name: "Wildlife Spotting Guide", path: "/blog/wildlife-spotting-guide" },
+export const rightLinks = [
  {
-  name: "Winter Hill Walking Safety",
-  path: "/blog/winter-hill-walking-safety",
+  cat: "Gear",
+  links: [{ link: "Command Line Cheat Sheet", link_url: "/blog/command-line" }],
  },
  {
-  name: "Navigation Skills for Hill Walkers",
-  path: "/blog/navigation-skills-for-hill-walkers",
+  cat: "Nature",
+  links: [
+   {
+    link: "Wildlife Spotting Guide",
+    link_url: "/blog/wildlife-spotting-guide",
+   },
+  ],
  },
  {
-  name: "Planning Your First Multi-Day Trek",
-  path: "/blog/planning-your-first-multi-day-trek",
+  cat: "Routes",
+  links: [
+   {
+    link: "Pedal to Israel",
+    link_url: "/blog/pedal-to-israel",
+   },
+   {
+    link: "Is there any evidence that Jesus the son of God existed?",
+    link_url: "/blog/was-jesus-the-son-of-god",
+   },
+  ],
  },
- { name: "About Walking", path: "/blog/about" },
+ {
+  cat: "Safety",
+  links: [
+   {
+    link: "Winter Hill Walking Safety",
+    link_url: "/blog/winter-hill-walking-safety",
+   },
+   {
+    link: "Navigation Skills for Hill Walkers",
+    link_url: "/blog/navigation-skills-for-hill-walkers",
+   },
+  ],
+ },
 ];

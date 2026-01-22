@@ -6,7 +6,6 @@ interface Post {
  description: string;
  image: string;
  category: string;
- author: string;
  date: string;
 }
 
@@ -48,7 +47,6 @@ onMounted(() => {
    <h3>{{ post.title }}</h3>
    <p class="post-description">{{ post.description }}</p>
    <div class="post-meta">
-    <span class="post-author">{{ post.author }}</span>
     <span class="post-date">{{ formatDate(post.date) }}</span>
    </div>
   </div>

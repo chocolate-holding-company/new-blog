@@ -10,7 +10,6 @@
        <h1 class="post-title">{{ post.title }}</h1>
        <p class="post-description">{{ post.description }}</p>
        <div class="post-meta">
-        <span class="post-author">By {{ post.author }}</span>
         <span class="post-date">{{ formatDate(post.date) }}</span>
        </div>
       </div>
@@ -28,7 +27,7 @@ import { blogPosts } from "~/data/blogPosts";
 const route = useRoute();
 
 const postsSorted = [...blogPosts].sort(
- (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+ (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
 );
 
 const post = computed(() => postsSorted.find((p) => p._path === route.path));

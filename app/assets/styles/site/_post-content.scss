@@ -22,7 +22,7 @@
  h6 {
   color: $text-dark;
   margin-top: $spacing-lg;
-  margin-bottom: $spacing-md;
+  margin-bottom: $spacing-sm;
  }
 
  h1 {
@@ -37,7 +37,6 @@
 
  h2 {
   font-size: 2rem;
-  text-align: center;
 
   @media (max-width: $breakpoint-mobile) {
    font-size: 1.75rem;
@@ -46,7 +45,6 @@
 
  h3 {
   font-size: 1.5rem;
-  text-align: center;
 
   @media (max-width: $breakpoint-mobile) {
    font-size: 1.35rem;
@@ -55,9 +53,9 @@
 
  p {
   margin-bottom: $spacing-md;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1rem;
  }
 
  .intro-para {
@@ -67,7 +65,7 @@
   margin: $spacing-sm 0 $spacing-lg 0;
 
   p {
-   font-size: 22px;
+   font-size: 1.3rem;
    font-style: italic;
    font-weight: 300;
   }
@@ -76,20 +74,29 @@
  @include media(700) {
   p {
    font-size: 1.2rem;
+   line-height: 1.6;
   }
   .intro-para {
    margin: $spacing-lg $spacing-md $spacing-xxl $spacing-md;
 
    p {
-    font-size: 28px;
+    font-size: 1.4rem;
    }
   }
  }
 
  figure,
  img {
-  margin-top: $spacing-xl;
-  margin-bottom: $spacing-xl;
+  margin-top: $spacing-lg;
+  margin-bottom: $spacing-lg;
+ }
+
+ @include media(700) {
+  figure,
+  img {
+   margin-top: $spacing-xl;
+   margin-bottom: $spacing-xl;
+  }
  }
 
  figure img {
@@ -123,7 +130,7 @@
  }
 
  strong {
-  font-weight: 700;
+  font-weight: 600;
   color: $text-dark;
  }
 

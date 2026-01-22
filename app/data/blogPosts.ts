@@ -10,7 +10,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Beginner",
   date: "2026-09-11",
-  author: "Howard Lucas",
  },
 
  {
@@ -22,7 +21,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Beginner",
   date: "2024-11-15",
-  author: "Sarah Mitchell",
  },
  {
   _path: "/blog/command-line",
@@ -33,15 +31,12 @@ export const blogPosts = [
    "https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Gear",
   date: "2024-11-10",
-  author: "Emma Thompson",
  },
  {
   _path: "/blog/git-cheat-sheet",
   title: "Git Cheat-Sheet",
   description:
    "Build the strength and endurance needed to tackle challenging hill walks with confidence.",
-  seo_description:
-   "Markdown guide showing all the tags and goodness of Markdown this is seo description.",
   image:
    "https://images.pexels.com/photos/4662343/pexels-photo-4662343.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Fitness",
@@ -57,7 +52,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/1697912/pexels-photo-1697912.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Safety",
   date: "2024-10-25",
-  author: "Sarah Mitchell",
  },
  {
   _path: "/blog/planning-your-first-multi-day-trek",
@@ -68,7 +62,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/1271968/pexels-photo-1271968.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Advanced",
   date: "2024-10-15",
-  author: "Michael Chen",
  },
  {
   _path: "/blog/wildlife-spotting-guide",
@@ -79,7 +72,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/1661535/pexels-photo-1661535.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Nature",
   date: "2024-11-01",
-  author: "Emma Thompson",
  },
  {
   _path: "/blog/winter-hill-walking-safety",
@@ -90,7 +82,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Safety",
   date: "2024-10-30",
-  author: "James Wilson",
  },
  {
   _path: "/blog/about",
@@ -100,7 +91,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Advanced",
   date: "2024-10-15",
-  author: "Howard Lucas",
  },
  {
   _path: "/blog/was-jesus-the-son-of-god",
@@ -110,7 +100,6 @@ export const blogPosts = [
   image: "/images/is-jesus-son-of-god.webp",
   category: "Routes",
   date: "2024-12-08",
-  author: "Howard Lucas",
  },
  {
   _path: "/blog/pedal-to-israel",
@@ -120,6 +109,5 @@ export const blogPosts = [
   image: "/images/israel-header.png",
   category: "Routes",
   date: "2026-01-24",
-  author: "Howard Lucas",
  },
 ];

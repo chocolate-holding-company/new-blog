@@ -85,19 +85,9 @@
     }
 
     .post-meta {
-     display: flex;
-     gap: $spacing-md;
      font-size: 0.95rem;
      opacity: 0.9;
-
-     @media (max-width: $breakpoint-mobile) {
-      flex-direction: column;
-      gap: $spacing-xs;
-     }
-
-     .post-author {
-      font-weight: 600;
-     }
+     font-weight: 500;
     }
    }
   }

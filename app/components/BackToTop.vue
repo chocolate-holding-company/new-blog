@@ -1,5 +1,6 @@
 <script setup lang="ts">
 // No import needed! useScrollProgress is auto-imported by Nuxt.
+
 const { isVisible, dashOffset, circumference, radius, scrollToTop } =
  useScrollProgress(400);
 </script>
@@ -85,5 +86,11 @@ const { isVisible, dashOffset, circumference, radius, scrollToTop } =
 
 .back-to-top:hover .arrow-icon {
  transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+ .back-to-top {
+  display: none;
+ }
 }
 </style>
