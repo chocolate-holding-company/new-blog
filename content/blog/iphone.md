@@ -16,7 +16,6 @@ Will the image load
 
 ::
 > [!TIP] you better stop looking
-::
 
 so lets see if it works
 this shouldnt be a break
