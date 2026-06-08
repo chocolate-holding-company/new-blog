@@ -28,6 +28,8 @@ const icon = computed(() => {
    return "⚠️";
   case "success":
    return "✨";
+  case "danger":
+   return "❌";
   case "info":
    return "🗒️";
   default:
@@ -39,7 +41,8 @@ const icon = computed(() => {
 <style>
 .bear-note {
  display: flex;
- align-items: flex-start;
+ align-items: center;
+ /* align-content: center; */
  padding: 14px 18px;
  margin: 2rem 0;
  border-radius: 6px;
@@ -51,6 +54,7 @@ const icon = computed(() => {
 .icon {
  font-size: 1.2rem;
  flex-shrink: 0;
+ margin-right: 10px;
 }
 
 .content {
@@ -59,7 +63,7 @@ const icon = computed(() => {
 }
 
 .content p {
- margin-bottom: 0 !important;
+ margin: 0 !important;
 }
 
 /* Dynamic Styles */
@@ -81,6 +85,10 @@ const icon = computed(() => {
  color: #22c55e;
 }
 
+.danger p {
+ color: #dd0e0e;
+}
+
 .success {
  background-color: #f0fdf4;
  border-color: #dcfce7;
@@ -91,5 +99,11 @@ const icon = computed(() => {
  background-color: #eff6ff;
  border-color: #dbeafe;
  border-left-color: #3b82f6;
+}
+
+.danger {
+ background-color: #f5e0e0;
+ border-color: #fedbdb;
+ border-left-color: #e04949;
 }
 </style>

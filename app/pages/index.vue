@@ -71,7 +71,6 @@
     </div>
    </div>
   </section>
-  <div class="special-box"><p>Hi there man!</p></div>
   <BackToTop />
   <Footer />
  </div>

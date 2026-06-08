@@ -11,6 +11,7 @@ export const leftLinks = [
     link_url: "/blog/planning-your-first-multi-day-trek",
    },
    { link: "About Walking", link_url: "/blog/about" },
+   { link: "The New iPhone Page", link_url: "/blog/iphone" },
   ],
  },
  {
