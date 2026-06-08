@@ -3,20 +3,20 @@ html {
  scroll-behavior: smooth;
 }
 
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
+// * {
+//  margin: 0;
+//  padding: 0;
+//  box-sizing: border-box;
+// }
 
 body {
  font-family: $font;
  font-optical-sizing: auto;
  font-weight: 400;
  font-style: normal;
- color: $text-dark;
+ color: var(--text-dark);
  line-height: 1.5;
- background-color: #ffffff;
+ background-color: var(--bg-color);
 }
 
 a {
@@ -71,12 +71,6 @@ img {
  max-width: 100%;
  height: auto;
  display: block;
-}
-
-.container {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 $spacing-md;
 }
 
 h1,

@@ -23,3 +23,15 @@ Always let someone know where you're going and when you expect to return. Check 
 Start with shorter walks on well-maintained paths. As you gain experience and fitness, you can gradually tackle longer routes and more challenging terrain. Remember to listen to your body and take breaks when needed.
 
 The beauty of hill walking is that you can progress at your own pace and there's always a new challenge waiting around the corner.
+
+::Bearnote{type="warning"}
+What about those warning messages
+::
+
+::Bearnote{type="success"}
+Lets do another message success
+::
+
+::Bearnote{type="info"}
+And lets do an ordinary info note
+::

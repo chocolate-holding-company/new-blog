@@ -1,0 +1,166 @@
+@layer base {
+ html {
+  scroll-behavior: smooth;
+ }
+
+ body {
+  font-family: var(--font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: var(--text-p-fluid);
+  font-style: normal;
+  color: var(--main-text);
+  /* line-height: 1.5; */
+  background-color: var(--bg-color);
+ }
+
+ a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+ }
+
+ p,
+ ul,
+ ol,
+ dl,
+ code,
+ table,
+ figcaption {
+  color: var(--main-text);
+ }
+
+ i,
+ em,
+ dfn,
+ cite,
+ abbr,
+ address {
+  font-style: italic;
+ }
+
+ abbr,
+ acronym {
+  border-bottom: 1px dotted gray;
+  cursor: help;
+ }
+
+ mark,
+ ins {
+  background: rgb(221, 215, 215);
+  text-decoration: none;
+ }
+
+ pre,
+ code,
+ kbd,
+ tt,
+ var {
+  font-family: var(--code-font);
+ }
+
+ del {
+  text-decoration-color: red;
+ }
+
+ button,
+ [type="button"],
+ [type="submit"],
+ .btn-primary {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition);
+ }
+
+ img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  font-family: var(--heading-font);
+  color: var(--main-text);
+  font-weight: 700;
+ }
+
+ h1 {
+  font-size: var(--text-h1-fluid);
+ }
+ h2 {
+  font-size: var(--text-h2-fluid);
+ }
+ h3 {
+  font-size: var(--text-h3-fluid);
+ }
+ h4 {
+  font-size: var(--text-h4-fluid);
+ }
+
+ .lead {
+  font-size: var(--text-lead-fluid);
+ }
+
+ p {
+  margin-bottom: var(--spacing-md);
+ }
+
+ input,
+ textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: var(--font);
+  transition:
+   border-color 0.2s,
+   box-shadow 0.2s;
+ }
+
+ .input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  border-width: 2px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+ }
+
+ table {
+  border-collapse: collapse;
+  border-spacing: 0;
+ }
+
+ /* If JS is disabled, show the cards immediately */
+ .no-js .post-card {
+  opacity: 1;
+  transform: none;
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+  /* Disable the reveal animations */
+  .post-card {
+   opacity: 1 !important;
+   transform: none !important;
+   transition: none !important;
+  }
+
+  /* Disable the smooth scroll behavior */
+  html {
+   scroll-behavior: auto !important;
+  }
+
+  /* Disable the back-to-top button animation */
+  .back-to-top {
+   transition: none !important;
+  }
+ }
+}

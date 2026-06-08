@@ -1,4 +1,6 @@
 @use "sass:color";
+@use "base-color" as *;
+
 $font: "Montserrat", sans-serif;
 $heading-font: $font;
 $code-font: "Source Code Pro", monospace;
@@ -10,11 +12,27 @@ $lead: calc($font-size * 1.234);
 $secondary: calc($font-size / 1.125);
 $third: calc($font-size / 1.255);
 
-$primary-color: #c41e3a;
-$secondary-color: #e8e8e8;
-$text-dark: #333333;
-$text-light: #ffffff;
-$border-color: #cccccc;
+// Default Light Mode
+:root {
+ --bg-color: #{clr("slate", 50)};
+ --text-dark: #{clr("slate", 700)};
+ --text-light: #ffffff;
+ --card-bg: #f9f9f9;
+ --border-color: #e5e7eb;
+ --accent: #3b82f6;
+}
+
+// Dark Mode overrides
+body.dark {
+ --bg-color: #333333;
+ --text-dark: #fff;
+ --text-light: #333333;
+ --card-bg: #1e1e1e;
+ --border-color: #374151;
+ --accent: #60a5fa;
+}
+$primary: #{clr("red", 700)};
+$second: white;
 $shadow: rgba(0, 0, 0, 0.1);
 
 // Informaton colors
@@ -32,8 +50,29 @@ $spacing-xxl: 64px;
 $border-radius: 8px;
 $transition: all 0.3s ease;
 
-$button-background: color.adjust($primary-color, $lightness: -5%);
-$button-color: $primary-color;
+//$button-background: color.adjust($primary, $lightness: -5%);
+$button-color: $primary;
 
 $breakpoint-mobile: 768px;
 $breakpoint-tablet: 1024px;
+
+$duration: 150ms !default;
+$timing: ease !default;
+
+//colors with no dark mode
+$white: #{clr("slate", 50)};
+$black: #{clr("slate", 950)};
+$first-color: #{clr("blue", 600)};
+$second-color: #{clr("rose", 600)};
+$dark-gray: #{clr("neutral", 700)};
+$medium-gray: #{clr("neutral", 500)};
+$light-gray: #{clr("neutral", 200)};
+// Status
+$error: #{clr("rose", 700)};
+$alert: #{clr("amber", 500)};
+$success: #{clr("green", 700)};
+
+// --font-color: #{clr("slate", 700)};
+// --heading-color: #{clr("slate", 900)};
+// --link-color: #{clr("sky", 900)};
+// --hover-color: #{clr("sky", 800)};

@@ -78,7 +78,7 @@
   margin-bottom: 1.5rem;
  }
  .submit-btn {
-  @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+  @include button-style(transparent, $primary, $primary, #ffffff);
   @include center;
   display: block;
   padding: $spacing-xs $spacing-sm;
@@ -92,7 +92,7 @@
   gap: 0.5rem;
  }
  .submit-btn:disabled {
-  background-color: $primary-color;
+  background-color: $primary;
   cursor: not-allowed;
  }
  .message {
@@ -114,4 +114,22 @@
  .hidden-field {
   display: none;
  }
+}
+.moderation-badge {
+ font-size: 0.7rem;
+ background-color: #fef3c7; /* Light amber */
+ color: #92400e; /* Dark amber text */
+ padding: 2px 8px;
+ border-radius: 12px;
+ margin-left: 8px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.025em;
+ border: 1px solid #fcd34d;
+}
+
+/* Optional: Make the whole card look slightly faded/transparent */
+.comment-card:has(.moderation-badge) {
+ border-left: 4px solid #fcd34d;
+ background-color: #fafafa;
 }

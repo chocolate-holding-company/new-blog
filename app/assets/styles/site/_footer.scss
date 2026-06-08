@@ -1,8 +1,8 @@
 @use "../root/" as *;
 
 .footer {
- background-color: $text-dark;
- color: $text-light;
+ background-color: clr("neutral", 800);
+ color: clr("neutral", 100);
  padding: $spacing-xl 0 $spacing-md;
  margin-top: $spacing-xxl;
 
@@ -20,16 +20,10 @@
 
  .footer-section {
   h3 {
-   color: $primary-color;
+   color: $primary;
    margin-bottom: $spacing-sm;
    font-size: 1.25rem;
   }
-
-  // h4 {
-  //  color: $text-light;
-  //  margin-bottom: $spacing-sm;
-  //  font-size: 1.1rem;
-  // }
 
   p {
    margin-bottom: $spacing-sm;
@@ -47,13 +41,13 @@
    opacity: 0.8;
    font-size: 0.9rem;
    a {
-    color: $text-light;
+    color: white;
     opacity: 0.9;
     transition: $transition;
 
     &:hover {
      opacity: 1;
-     color: $primary-color !important;
+     color: $primary !important;
     }
    }
   }

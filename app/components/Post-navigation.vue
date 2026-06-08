@@ -1,6 +1,6 @@
 <template>
  <div class="post-navigation">
-  <NuxtLink to="/" class="back-button">
+  <NuxtLink to="/" class="back-button but-primary">
    <svg
     width="20"
     height="20"

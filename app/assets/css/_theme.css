@@ -1,0 +1,78 @@
+@theme {
+ --font: "Montserrat", sans-serif;
+ --heading-font: var(--font);
+ --code-font: "Source Code Pro", monospace;
+
+ --font-size: 1.1rem;
+
+ --lead: 1.3rem;
+ --secondary: 0.934rem;
+ --third: 0.743rem;
+
+ /* Default Light Mode */
+ --bg-color: var(--color-slate-50);
+ --main-text: var(--color-slate-700);
+ --text-light: #ffffff;
+ --card-bg: #f9f9f9;
+ --border-color: #e5e7eb;
+ --accent: #3b82f6;
+
+ --primary: var(--color-rose-800);
+ --second: var(--color-slate-50);
+ --shadow: rgba(0, 0, 0, 0.1);
+
+ /* Informaton colors */
+ --error-color: var(--color-red-800);
+ --alert-color: var(--color-amber-700);
+ --success-color: var(--color-green-700);
+
+ /* default fluid fonts */
+ /* Utilizing a clean formula: clamp(min, base + scaling, max) */
+ --text-p-fluid: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
+ --text-lead-fluid: clamp(1.1rem, 1rem + 0.35vw, 1.3rem);
+ --text-h4-fluid: clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);
+ --text-h3-fluid: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+ --text-h2-fluid: clamp(2rem, 1.7rem + 1vw, 2.4rem);
+ --text-h1-fluid: clamp(2.5rem, 2.2rem + 1.5vw, 3.5rem);
+
+ --spacing-xs: 8px;
+ --spacing-sm: 16px;
+ --spacing-md: 24px;
+ --spacing-lg: 32px;
+ --spacing-xl: 48px;
+ --spacing-xxl: 64px;
+
+ --border-radius: 8px;
+ --transition: all 0.3s ease;
+
+ --button-background: var(--color-rose-100);
+ --button-color: var(--primary);
+
+ --breakpoint-mobile: 768px;
+ --breakpoint-tablet: 1024px;
+
+ --duration: 150ms !default;
+ --timing: ease !default;
+
+ --keyframes-fade-in: {
+  from {
+   opacity: 0;
+  }
+  to {
+   opacity: 1;
+  }
+ };
+ --keyframes-slide-up: {
+  from {
+   transform: translateY(20px);
+   opacity: 0;
+  }
+  to {
+   transform: translateY(0);
+   opacity: 1;
+  }
+ };
+
+ --animate-fade-in: fade-in 0.4s ease-in-out;
+ --animate-slide-up: slide-up 0.3s ease;
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:wght@400&display=swap");
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "./_theme.css";
+@import "./_base.css";
+@import "./_components.css";
+
+@utility post-navigation {
+ max-width: 960px;
+ margin: 0 auto;
+ padding-bottom: var(--spacing-xxl);
+
+ @media (max-width: 640px) {
+  padding-bottom: var(--spacing-xl);
+ }
+}
+
+@utility back-button {
+ display: inline-flex;
+ align-items: center;
+ gap: var(--spacing-xs);
+ padding: 5px 10px;
+ /* border: 2px solid var(--primary); */
+ /* color: var(--primary); */
+ /* border-radius: var(--border-radius);
+ font-weight: 500;
+ font-size: 0.9rem; */
+ transition: var(--transition);
+
+ &:hover {
+  /* background: color-mix(in srgb, red 95%, black); */
+  /* color: white; */
+  transform: translateX(-4px);
+ }
+
+ /* Keeps the SVG transition smooth if you animate it */
+ & svg {
+  transition: var(--transition);
+ }
+}
+
+@utility newsletter-wrapper {
+ max-width: 700px;
+ margin: 0 auto var(--spacing-xxl) auto;
+ padding: 48px 32px;
+ background: #f9fafb; /* Light neutral background */
+ border: 1px solid #e5e7eb;
+ border-radius: 16px;
+ text-align: center;
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+ & h3 {
+  /* font-size: 1.5rem; */
+  color: #111827;
+  margin-bottom: 12px;
+  font-weight: 700;
+  @media (min-width: 700px) {
+   /* font-size: 2rem; */
+  }
+ }
+
+ & description {
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+ }
+
+ & form {
+  display: flex;
+  flex-direction: column;
+  gap: var(spacing-lg);
+  align-items: center;
+ }
+
+ & input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  justify-content: center;
+ }
+
+ & input[type="email"] {
+  width: 100%;
+  margin-top: 8px;
+ }
+
+ & p {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #059669; /* Success green */
+  font-weight: 500;
+ }
+ /* Mobile Responsiveness */
+ @media (min-width: 480px) {
+  & input[type="email"] {
+   max-width: 350px;
+  }
+ }
+}
+
+/* Page fade transition for entering/exiting post pages */
+.fade-enter-active,
+.fade-leave-active {
+ transition: opacity 1000ms ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+ opacity: 0;
+}
+.fade-enter-to,
+.fade-leave-from {
+ opacity: 1;
+}

@@ -1,9 +1,15 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
  future: {
   compatibilityVersion: 4,
  },
  compatibilityDate: "2025-07-15",
+ app: {
+  head: {
+   script: [{ src: "/theme-check.js" }],
+  },
+ },
  devtools: { enabled: true },
  plugins: ["./plugins/firebase.client.ts"],
  runtimeConfig: {
@@ -18,7 +24,10 @@ export default defineNuxtConfig({
   },
  },
  modules: ["@nuxt/content", "@vueuse/nuxt"],
- css: ["~/assets/styles/main.css"],
+ css: ["~/assets/css/main.css"],
+ vite: {
+  plugins: [tailwindcss()],
+ },
  content: {
   renderer: {
    anchorLinks: false,

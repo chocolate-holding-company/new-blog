@@ -1,18 +1,37 @@
 <template>
- <footer class="footer">
+ <footer
+  class="bg-neutral-700 py-(--spacing-xl) px-(--spacing-md) mt-(--spacing-xxl)"
+ >
   <div class="container">
    <div class="footer-content">
-    <div class="footer-section">
-     <h3>Hill Walking Made Easy</h3>
-     <p>Your guide to exploring the hills safely and confidently.</p>
+    <div>
+     <h3 class="text-(--primary) mb-(--spacing-sm) text-[1.25rem]">
+      Hill Walking Made Easy
+     </h3>
+     <p class="mb-(--spacing-sm) opacity-90 text-neutral-100">
+      Your guide to exploring the hills safely and confidently.
+     </p>
     </div>
    </div>
-   <div class="footer-bottom">
-    <p>
+   <DarkMode />
+   <div
+    class="border-t-solid border-t-2 border-t-neutral-500 pt-(--spacing-md) text-center"
+   >
+    <p class="m-0 opacity-80 text-[0.9rem] text-neutral-100">
      &copy; {{ currentYear }} Hill Walking Made Easy |
-     <a href="#" @click.prevent="showContactModal = true">Contact Us</a>
+     <a
+      class="text-neutral-100 opacity-80 transition-(--transition) hover:opacity-100 hover:text-(--primary)"
+      -href="#"
+      @click.prevent="showContactModal = true"
+      >Contact Us</a
+     >
      |
-     <a href="#" @click.prevent="showPrivacyModal = true">Privacy</a>
+     <a
+      class="text-neutral-100 opacity-80 transition-(--transition) hover:opacity-100 hover:text-(--primary)"
+      href="#"
+      @click.prevent="showPrivacyModal = true"
+      >Privacy</a
+     >
     </p>
     <Modal v-if="showPrivacyModal" @close="showPrivacyModal = false">
      <Privacy />
@@ -34,23 +53,40 @@ const showContactModal = ref(false);
 
 let body = null;
 onMounted(() => {
-    body = typeof document !== "undefined" ? document.body : null;
-    if (!body) return;
-    if (showContactModal.value || showPrivacyModal.value) {
-        body.classList.add("no-scroll");
-    } else {
-        body.classList.remove("no-scroll");
-    }
+ body = typeof document !== "undefined" ? document.body : null;
+ if (!body) return;
+ if (showContactModal.value || showPrivacyModal.value) {
+  body.classList.add("no-scroll");
+ } else {
+  body.classList.remove("no-scroll");
+ }
 });
 
-const stopWatch = watch([showContactModal, showPrivacyModal], ([contact, privacy]) => {
-    if (!body) return;
-    if (contact || privacy) body.classList.add("no-scroll");
-    else body.classList.remove("no-scroll");
-});
+const stopWatch = watch(
+ [showContactModal, showPrivacyModal],
+ ([contact, privacy]) => {
+  if (!body) return;
+  if (contact || privacy) body.classList.add("no-scroll");
+  else body.classList.remove("no-scroll");
+ },
+);
 
 onBeforeUnmount(() => {
-    stopWatch();
-    if (body) body.classList.remove("no-scroll");
+ stopWatch();
+ if (body) body.classList.remove("no-scroll");
 });
 </script>
+
+<style scoped>
+.footer-content {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: var(--spacing-lg);
+ margin-bottom: var(--spacing-lg);
+
+ @media (max-width: var(--breakpoint-mobile)) {
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+ }
+}
+</style>

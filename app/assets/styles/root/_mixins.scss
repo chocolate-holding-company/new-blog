@@ -26,9 +26,24 @@
 // breakpoints - base styles are phone first
 // eg @include media(956) - min-width 956px
 // eg @include media(956rem) - min-width 956rem
+//@mixin media($point) {
+// Convert unitless numbers to px, otherwise use the provided unit
+//  $breakpoint: if(math.is-unitless($point), #{$point}px, $point);
+//  @media only screen and (min-width: $breakpoint) {
+//   @content;
+//  }
+// }
+
 @mixin media($point) {
- // Convert unitless numbers to px, otherwise use the provided unit
- $breakpoint: if(math.is-unitless($point), #{$point}px, $point);
+ $breakpoint: null;
+
+ // Modern logic: Explicitly check for unitless numbers
+ @if math.is-unitless($point) {
+  $breakpoint: #{$point}px;
+ } @else {
+  $breakpoint: $point;
+ }
+
  @media only screen and (min-width: $breakpoint) {
   @content;
  }
@@ -38,7 +53,7 @@
 @mixin button-style($bg-color, $text-color, $hover-bg, $hover-text) {
  display: inline-block;
  //padding: $spacing-sm $spacing-md;
- border: 2px solid $primary-color;
+ border: 2px solid $primary;
  border-radius: $border-radius;
  text-decoration: none;
  //font-size: 1rem;
@@ -70,7 +85,7 @@
 
 // Usage Example
 .btn-primary {
- @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+ @include button-style(transparent, $primary, $primary, #ffffff);
 }
 
 .btn-success {

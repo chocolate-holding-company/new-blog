@@ -1,0 +1,595 @@
+@layer components {
+ .special-box {
+  @apply my-8 bg-rose-400;
+  padding: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  & p {
+   @apply text-lg text-left pb-2 font-bold;
+   text-decoration: underline;
+   transition:
+    transform 0.2s ease-in-out,
+    background-color 0.3s ease;
+  }
+ }
+ .but-primary {
+  @apply border-2 border-solid border-(--primary) text-sm rounded-lg font-medium;
+  letter-spacing: 1px;
+  &:hover {
+   background-color: var(--primary);
+   color: var(--color-amber-100);
+   transform: scale(1.05);
+  }
+ }
+ .table-custom {
+  @apply w-full my-8 bg-transparent border-collapse;
+
+  & caption {
+   @apply text-lg text-left pb-2 font-bold;
+   caption-side: top;
+  }
+
+  & th,
+  & td {
+   @apply p-3 align-top border-t border-(--primary) text-base leading-relaxed text-left transition-colors duration-150;
+  }
+
+  & th {
+   @apply font-bold;
+  }
+  & td {
+   @apply font-normal;
+  }
+
+  /* Hover effect using native CSS nesting */
+  @media (hover: hover) {
+   & tbody tr:hover td {
+    background-color: var(--color-slate-200);
+   }
+  }
+ }
+
+ /* Striped variant modifier */
+ .table-striped tbody tr:nth-child(odd) td {
+  background-color: var(--color-slate-200);
+ }
+
+ /* Bordered variant modifier */
+ .table-bordered {
+  @apply border-l-0 border-separate border-(--primary);
+
+  & th,
+  & td {
+   @apply border-l-(--primary);
+  }
+ }
+}
+
+@utility modal-overlay {
+ position: fixed;
+ inset: 0;
+ background-color: color-mix(in srgb, black 70%, transparent);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 10004;
+ padding: var(--spacing-sm);
+ animation: var(--animate-fade-in);
+
+ @media (min-width: 600px) {
+  padding: var(--spacing-md);
+ }
+}
+
+@utility modal-content {
+ background: #f9fafb;
+ border-radius: var(--border-radius);
+ padding: var(--spacing-xl) var(--spacing-lg);
+ max-width: 600px;
+ width: 100%;
+ max-height: 90vh;
+ overflow-y: auto;
+ position: relative;
+ animation: var(--animate-slide-up);
+
+ @media (max-width: 700px) {
+  padding: 0;
+  background: white;
+ }
+}
+
+@utility close-button {
+ position: absolute;
+ top: var(--spacing-sm);
+ right: var(--spacing-sm);
+ background: none;
+ border: none;
+ color: #3333;
+ cursor: pointer;
+ padding: var(--spacing-xs);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ transition: var(--transition);
+
+ &:hover {
+  background-color: var(--secondary);
+ }
+}
+
+/* Stop the page scrolling when modal open */
+body.no-scroll {
+ overflow: hidden;
+}
+
+@utility navbar {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 80px;
+ margin-bottom: 20px;
+ z-index: 10001;
+ transition: transform 0.4s ease;
+
+ &.menu-active {
+  background-color: #333 !important;
+ }
+}
+
+@utility menu-container {
+ display: flex;
+ flex-direction: row;
+ gap: 4rem;
+ max-width: 1200px;
+ margin: 0 auto;
+
+ /* Explicit max-width from your original styles */
+ @media (max-width: 768px) {
+  flex-direction: column;
+  gap: 0;
+ }
+}
+
+@utility links-column {
+ flex: 1;
+}
+
+@utility category-group {
+ margin-bottom: 2rem;
+}
+
+@utility category-title {
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1rem;
+ color: rgb(58, 117, 237);
+ margin-bottom: 1.1rem;
+ border-bottom: 1px solid #eee;
+ padding-bottom: 0.5rem;
+ width: 100px;
+ margin: 0 auto 0.9rem auto;
+
+ /* Explicit max-width from your original styles */
+ @media (min-width: 768px) {
+  font-size: 0.8rem;
+ }
+}
+
+@utility nav-hidden {
+ transform: translateY(-120%);
+}
+
+@utility nav-container {
+ position: absolute;
+ right: 20px;
+ top: 20px;
+ width: 60px;
+ padding: 0 1px;
+ background: #333333;
+ border-radius: 5px;
+}
+
+/* --- THE HAMBURGER --- */
+@utility hamburger {
+ position: relative;
+ background: none;
+ border: none;
+ cursor: pointer;
+ padding: 15px;
+ display: flex;
+ flex-direction: column;
+ gap: 6px;
+ z-index: 10002;
+}
+
+@utility line {
+ width: 30px;
+ height: 2px;
+ background: white;
+ transition: 0.3s;
+
+ .active & {
+  background: white !important;
+ }
+
+ .active &:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+ }
+
+ .active &:nth-child(2) {
+  transform: translateY(-4px) rotate(-45deg);
+ }
+}
+
+/* --- THE OVERLAY --- */
+@utility menu-overlay {
+ position: fixed;
+ overflow-y: scroll;
+ text-align: center;
+ inset: 70px 0 0 0;
+ width: 100vw;
+ height: 100vh;
+ background: #333333;
+}
+
+@utility menu-links {
+ padding: 0 40px;
+ margin-bottom: 150px;
+
+ & li {
+  margin-bottom: 0.7rem;
+ }
+
+ /* CORRECTED: Fixed from max-width to min-width based on your SCSS mixin */
+ @media (min-width: 768px) {
+  padding: 30px 75px 60px 75px;
+ }
+
+ @media (min-width: 1020px) {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 60px;
+ }
+}
+
+@utility menu-link {
+ color: white;
+ font-size: 2rem;
+ line-height: 1.3;
+ text-decoration: none;
+ text-align: center;
+ margin: 25px 0;
+ padding: 1rem 0;
+ opacity: 0;
+ transform: translateX(30px);
+ transition: 0.5s ease;
+ transition-fill-mode: forwards;
+
+ &:hover {
+  color: cornflowerblue;
+ }
+
+ .overlay-enter-to &,
+ .menu-overlay & {
+  opacity: 1;
+  transform: translateX(0);
+ }
+}
+
+/* --- VUE/FRAMEWORK TRANSITIONS --- */
+@utility overlay-enter-active {
+ transition: all 0.4s ease-out;
+}
+@utility overlay-leave-active {
+ transition: all 0.4s ease-out;
+}
+
+@utility overlay-enter-from {
+ transform: translateX(20px);
+ opacity: 0;
+}
+@utility overlay-leave-to {
+ transform: translateX(20px);
+ opacity: 0;
+}
+
+/* --- MAGNETIC WRAPPER FIX --- */
+@utility magnetic-wrap {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ z-index: 10000;
+}
+
+/* Post-header */
+
+@utility layout {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+}
+
+@utility main-content {
+ flex: 1;
+}
+
+@utility blog-post {
+ margin-bottom: var(--spacing-xl);
+}
+
+@utility container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 var(--spacing-md);
+}
+
+/* --- POST HEADER & IMAGES --- */
+@utility post-header-image {
+ position: relative;
+ height: 500px;
+ overflow: hidden;
+
+ @media (max-width: 640px) {
+  height: 400px;
+ }
+
+ & img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+}
+
+@utility post-header-overlay {
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.3) 0%,
+  rgba(0, 0, 0, 0.7) 100%
+ );
+ display: flex;
+ align-items: flex-end;
+ padding: var(--spacing-xl) 0;
+
+ @media (max-width: 640px) {
+  padding: var(--spacing-lg) 0;
+ }
+}
+
+@utility post-header-content {
+ color: white;
+ max-width: 960px;
+ margin: 0 auto;
+}
+
+@utility post-category {
+ display: inline-block;
+ background-color: var(--primary);
+ color: white;
+ padding: 5px 10px;
+ border-radius: var(--border-radius);
+ font-size: 0.875rem;
+ font-weight: 600;
+ margin-bottom: var(--spacing-md);
+}
+
+@utility post-title {
+ font-size: 3rem;
+ margin-bottom: var(--spacing-md);
+ color: white;
+
+ @media (max-width: 640px) {
+  font-size: 2rem;
+ }
+}
+
+@utility post-description {
+ font-size: 1.25rem;
+ margin-bottom: var(--spacing-md);
+ opacity: 0.95;
+
+ @media (max-width: 640px) {
+  font-size: 1.05rem;
+ }
+}
+
+@utility post-meta {
+ font-size: 0.95rem;
+ opacity: 0.9;
+ font-weight: 500;
+}
+
+/* post-content */
+@utility post-content {
+ max-width: 960px;
+ margin: 0 auto;
+ padding: var(--spacing-xl) 0;
+ border-bottom: 1px solid #333;
+ margin-bottom: var(--spacing-lg);
+
+ /* --- Global Headings --- */
+ & :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-dark);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+ }
+
+ & h1 {
+  /* font-size: 2.5rem; */
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: var(--spacing-sm);
+
+  @media (max-width: 640px) {
+   /* font-size: 2rem; */
+  }
+ }
+
+ & h2 {
+  /* font-size: 2rem; */
+
+  @media (max-width: 640px) {
+   /* font-size: 1.75rem; */
+  }
+ }
+
+ & h3 {
+  /* font-size: 1.5rem; */
+
+  @media (max-width: 640px) {
+   /* font-size: 1.35rem; */
+  }
+ }
+
+ /* --- Paragraphs & Typography --- */
+ & p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+  color: #444;
+  /* font-size: 1rem; */
+
+  @media (min-width: 700px) {
+   /* font-size: 1.2rem; */
+   line-height: 1.6;
+  }
+ }
+
+ & strong {
+  font-weight: 600;
+  color: #333;
+ }
+
+ & em {
+  font-style: italic;
+ }
+
+ & a {
+  color: var(--primary);
+  text-decoration: underline;
+
+  &:hover {
+   /* Replaced color.adjust with standard CSS color-mix */
+   color: color-mix(in srgb, red 90%, black);
+  }
+ }
+
+ /* --- Intro Paragraph Callout --- */
+ & .intro-para {
+  border-block: 2px solid blue;
+  padding: 25px 10px 0 10px;
+  margin: var(--spacing-sm) 0 var(--spacing-lg) 0;
+
+  @media (min-width: 700px) {
+   margin: var(--spacing-lg) var(--spacing-md) var(--spacing-xxl)
+    var(--spacing-md);
+  }
+
+  & p {
+   font-size: 1.3rem;
+   font-style: italic;
+   font-weight: 300;
+
+   @media (min-width: 700px) {
+    font-size: 1.4rem;
+   }
+  }
+ }
+
+ /* --- Images & Figures --- */
+ & :is(figure, img) {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+
+  @media (min-width: 700px) {
+   margin-top: var(--spacing-xl);
+   margin-bottom: var(--spacing-xl);
+  }
+ }
+
+ & figure img {
+  margin-bottom: 0;
+ }
+
+ & figcaption {
+  text-align: center;
+  margin-top: var(--spacing-sm);
+  font-style: italic;
+ }
+
+ /* --- Lists --- */
+ & :is(ul, ol) {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+
+  & li {
+   margin-bottom: var(--spacing-xs);
+   line-height: 1.8;
+   color: #444;
+  }
+ }
+
+ & ul {
+  list-style-type: disc;
+ }
+
+ & ol {
+  list-style-type: decimal;
+ }
+
+ /* --- Code Blocks --- */
+ & code {
+  background-color: var(--second);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+ }
+
+ & pre {
+  background-color: var(--second);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-md);
+
+  & code {
+   background-color: transparent;
+   padding: 0;
+  }
+ }
+
+ /* --- Blockquotes --- */
+ & blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  font-style: italic;
+  color: #666;
+ }
+
+ /* --- Horizontal Rules (Decorative HR) --- */
+ & hr {
+  margin: 3rem 20px;
+  border-width: 0;
+  height: 1px;
+  background: #bfbfbf;
+  box-shadow: #fff 0 0 0 5px;
+  position: relative;
+  overflow: visible;
+
+  &::after {
+   content: "oooo";
+   position: absolute;
+   top: -10px;
+   left: 47%;
+   color: #bfbfbf;
+   background-color: white;
+   font-size: 12px;
+   box-shadow: #fff 0 0 0 8px;
+  }
+ }
+}

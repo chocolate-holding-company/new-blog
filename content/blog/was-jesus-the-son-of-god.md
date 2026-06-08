@@ -30,7 +30,11 @@ The New Testament is the primary source of information, but historians different
 - **Pauline Epistles (Letters of Paul):** These are the **earliest surviving Christian writings** (dating from the 50s and 60s AD, only about 20-30 years after Jesus's death). Paul claims to have met and interacted with eyewitnesses, including Jesus's brother, **James**, and his closest disciples, Peter and John, treating Jesus as a real person.
 - **The Gospels:** Matthew, Mark, Luke, and John are considered ancient biographies written in the style of the time, primarily focused on recounting the life, ministry, death, and resurrection of Jesus. Historians use various criteria (like the **criterion of embarrassment**—details embarrassing to the early church, like his baptism by John) to separate historical memory from theological tradition.
 
+::ProseImg
+
 ![](/images/is-jesus-son-of-god.webp)
+
+::
 
 ### 2. The Claim of "Son of God"
 

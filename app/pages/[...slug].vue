@@ -13,23 +13,22 @@ const postId = computed(() => route.path);
  <div>
   <ReadingProgressBar />
   <NavBar />
-  <div class="layout" id="main-content">
-   <main class="main-content">
-    <div class="blog-post">
-     <div class="blog-post">
-      <article class="post">
-       <PostHeader />
-       <div class="container">
-        <div class="post-content">
-         <transition name="fade" mode="out-in">
-          <ContentRenderer v-if="page" :value="page" />
-         </transition>
-        </div>
-        <Post-navigation />
+  <div class="min-h-screen flex flex-col" id="main-content">
+   <main class="flex-1">
+    <div class="mb-24">
+     <article class="post">
+      <PostHeader />
+      <div class="container">
+       <div class="prose table-custom post-content">
+        <transition name="fade" mode="out-in">
+         <ContentRenderer v-if="page" :value="page" />
+        </transition>
        </div>
-      </article>
-     </div>
+       <Post-navigation />
+      </div>
+     </article>
     </div>
+
     <Newsletter />
 
     <Comments :postId="postId" />

@@ -4,10 +4,10 @@
 .hero {
  background: linear-gradient(
   135deg,
-  $primary-color 0%,
-  color.adjust($primary-color, $lightness: -10%) 100%
+  $primary 0%,
+  color.adjust(red, $lightness: -10%) 100%
  );
- color: $text-light;
+ color: white;
  padding: $spacing-xxl 0;
  text-align: center;
 
@@ -66,7 +66,7 @@
  text-align: center;
 
  h2 {
-  color: $text-dark;
+  color: var(--text-dark);
   margin-bottom: $spacing-lg;
  }
 
@@ -78,13 +78,13 @@
  }
 
  .filter-btn {
-  @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+  @include button-style(transparent, $primary, $primary, #ffffff);
   padding: 8px 10px;
 
   &.active {
-   background-color: $primary-color;
-   color: $text-light;
-   border-color: $primary-color;
+   background-color: $primary;
+   color: white;
+   border-color: $primary;
   }
  }
 }
@@ -102,7 +102,7 @@
 }
 
 .post-card {
- background-color: white;
+ background-color: var(--card-bg);
  border-radius: $border-radius;
  overflow: hidden;
  box-shadow: 0 2px 8px $shadow;
@@ -135,9 +135,8 @@
    position: absolute;
    top: $spacing-md;
    right: $spacing-md;
-   background-color: $primary-color;
-   color: $text-light;
-   //padding: $spacing-xs $spacing-sm;
+   background-color: $primary;
+   color: white;
    padding: 5px 10px;
    border-radius: $border-radius;
    font-size: 0.775rem;
@@ -149,7 +148,7 @@
   padding: $spacing-md;
 
   h3 {
-   color: $text-dark;
+   color: var(--text-dark);
    margin-bottom: $spacing-sm;
    font-size: 1.25rem;
    line-height: 1.4;
@@ -171,7 +170,7 @@
    font-size: 0.875rem;
    color: #999;
    padding-top: $spacing-sm;
-   border-top: 1px solid $secondary-color;
+   border-top: 1px solid $secondary;
    font-weight: 500;
   }
  }
@@ -182,7 +181,7 @@
  padding-top: $spacing-lg;
 
  .load-more-btn {
-  @include button-style(transparent, $primary-color, $primary-color, #ffffff);
+  @include button-style(transparent, $primary, $primary, #ffffff);
   padding: 8px 10px;
  }
 }

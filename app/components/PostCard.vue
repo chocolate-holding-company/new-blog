@@ -35,18 +35,33 @@ onMounted(() => {
 <template>
  <article
   ref="cardRef"
-  class="post-card"
+  class="post-card bg-(--card-bg) rounded-(--border-radius) overflow-hidden"
   :style="{ '--delay': index % 3 }"
   @click="navigateTo(post._path)"
  >
-  <div class="post-image">
-   <img :src="post.image" :alt="post.title" loading="lazy" />
-   <div class="post-category">{{ post.category }}</div>
+  <div class="post-image relative h-60 overflow-hidden">
+   <img
+    class="w-full h-full object-cover transition-(--transition)"
+    :src="post.image"
+    :alt="post.title"
+    loading="lazy"
+   />
+   <div
+    class="absolute top-(--spacing-md) right-(--spacing-md) bg-(--primary) text-white py-1.25 px-2.5 rounded-(--border-radius) text-[0.775rem] font-medium"
+   >
+    {{ post.category }}
+   </div>
   </div>
-  <div class="home-post-content">
-   <h3>{{ post.title }}</h3>
-   <p class="post-description">{{ post.description }}</p>
-   <div class="post-meta">
+  <div class="p-(--spacing-md)">
+   <h3 class="mb-(--spacing-sm) text-[1.25rem]">
+    {{ post.title }}
+   </h3>
+   <p class="post-description text-[#383737] text-[0.95rem] overflow-hidden">
+    {{ post.description }}
+   </p>
+   <div
+    class="text-[0.875rem] text-[#999] pt-(--spacing-sm) border-t-2 border-t-solid border-t-(--secondary) font-medium"
+   >
     <span class="post-date">{{ formatDate(post.date) }}</span>
    </div>
   </div>
@@ -56,6 +71,29 @@ onMounted(() => {
 <style scoped>
 .post-card {
  cursor: pointer;
+ box-shadow: 0 2px 8px var(--shadow);
+ cursor: pointer;
+ transition: var(--transition);
+ animation: fadeIn 0.5s ease;
+}
+
+.post-card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.post-card:hover .post-image img {
+ transform: scale(1.05);
+}
+
+.post-description {
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ line-clamp: 3;
+ -webkit-box-orient: vertical;
+}
+
+.post-card {
  /* Reveal Animation Start State */
  opacity: 0;
  transform: translateY(30px);

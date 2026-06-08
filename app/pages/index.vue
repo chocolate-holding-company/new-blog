@@ -1,61 +1,37 @@
 <template>
  <div class="home">
   <ReadingProgressBar />
-  <section class="hero">
+  <section
+   class="bg-gradient-to-b from-[var(--primary)]/70 to-red-900/90 py-(--spacing-xxl) text-center max-(--breakpoint-mobile):py-(--spacing-xl)"
+  >
    <div class="container">
-    <div class="hero-content">
-     <h1 class="hero-title">Hill Walking Made Easy</h1>
-     <p class="hero-description">
+    <div class="max-w-200 mx-auto">
+     <h1 class="hero-title text-slate-50 mb-(--spacing-md)">
+      Hill Walking Made Easy
+     </h1>
+     <p
+      class="hero-description text-lead-fluid text-slate-50 opacity-95 leading-8"
+     >
       Discover expert guides, essential tips, and inspiring routes to make your
       hill walking adventures safe, enjoyable, and unforgettable.
      </p>
     </div>
    </div>
   </section>
-  <section class="test-container">
-   <div class="content-box">
-    <div class="icon-wrapper">
-     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="icon"
-     >
-      <path
-       stroke-linecap="round"
-       stroke-linejoin="round"
-       d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743.14a4.5 4.5 0 006.364-6.364 4.5 4.5 0 00-6.364 0c-.328.328-.328.866 0 1.194l.823.823a1.5 1.5 0 01-1.06 2.56h-1.258c-.626 0-1.145.442-1.246 1.059l-.044.27z"
-      />
-     </svg>
-    </div>
 
-    <h1>bylucas is <span class="highlight">tinkering.</span></h1>
-
-    <p class="description">
-     The labs at <strong>bylucas.org</strong> are currently active. I'm running
-     some final stress tests and squashing the last few bugs to make sure
-     everything is pixel-perfect.
-    </p>
-
-    <div class="status-wrapper">
-     <div class="status-indicator">
-      <span class="ping"></span>
-      <span class="dot"></span>
-     </div>
-     <span class="status-text">Tests currently passing</span>
-    </div>
-   </div>
-  </section>
-
-  <section class="posts-section">
+  <Construction />
+  <section
+   class="py-(--spacing-xxl) max-(--breakpoint-mobile):py-(--spacing-xl)"
+  >
    <div class="container">
-    <div class="filter-section">
-     <h2>Explore Our Guides</h2>
-     <div class="filters">
+    <div class="mb-(--spacing-xl) text-center">
+     <h2 class="mb-(--spacing-lg)">Explore Our Guides</h2>
+     <div class="flex flex-wrap gap-(--spacing-sm) justify-center">
       <button
-       :class="['filter-btn', { active: selectedCategory === 'All' }]"
+       :class="[
+        'filter-btn but-primary',
+        { active: selectedCategory === 'All' },
+       ]"
        @click="filterPosts('All')"
       >
        All Posts
@@ -63,7 +39,10 @@
       <button
        v-for="category in categories"
        :key="category"
-       :class="['filter-btn', { active: selectedCategory === category }]"
+       :class="[
+        'filter-btn but-primary',
+        { active: selectedCategory === category },
+       ]"
        @click="filterPosts(category)"
       >
        {{ category }}
@@ -79,15 +58,20 @@
       :index="index"
      />
     </div>
-    <div class="load-more-section">
+    <div class="text-center pt-(--spacing-lg)">
      <LoadingSpinner v-if="isLoading" />
 
-     <button v-else-if="hasMorePosts" class="load-more-btn" @click="loadMore">
+     <button
+      v-else-if="hasMorePosts"
+      class="but-primary py-[8px] px-2.5"
+      @click="loadMore"
+     >
       Load More Posts
      </button>
     </div>
    </div>
   </section>
+  <div class="special-box"><p>Hi there man!</p></div>
   <BackToTop />
   <Footer />
  </div>
@@ -151,3 +135,50 @@ useHead({
  meta: [{ name: "description", content: "Expert guides for hill walking." }],
 });
 </script>
+<style>
+/* .hero {
+ background: linear-gradient(
+  to bottom,
+  color-mix(in srgb, var(--primary) 30%, transparent) 0%,
+  color-mix(in srgb, color-mix(in srgb, red 90%, black) 70%, transparent) 100%
+);
+} */
+.hero-title {
+ animation: fadeInUp 0.8s ease;
+}
+.hero-description {
+ animation: fadeInUp 0.8s ease 0.2s both;
+}
+@keyframes fadeInUp {
+ from {
+  opacity: 0;
+  transform: translateY(30px);
+ }
+ to {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
+.filter-btn {
+ padding: 8px 10px;
+}
+
+.filter-btn.active {
+ background-color: var(--primary);
+ color: white;
+ border-color: var(--primary);
+}
+.posts-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+ gap: var(--spacing-lg);
+ margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: var(--breakpoint-mobile)) {
+ .post-grid {
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+ }
+}
+</style>

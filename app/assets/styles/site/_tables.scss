@@ -22,7 +22,7 @@ table {
  td {
   padding: 0.7rem;
   vertical-align: top;
-  border-top: 1px solid $text-dark;
+  border-top: 1px solid var(--border-color);
   font-size: $secondary;
   line-height: 1.5;
   color: black;
@@ -61,13 +61,13 @@ tbody tr th {
 
 // BORDERED ============================
 .table-bordered {
- border: 1px solid $text-dark;
+ border: 1px solid var(--border-color);
  border-left: 0;
  border-collapse: separate;
 
  th,
  td {
-  border-left: 1px solid $text-dark;
+  border-left: 1px solid var(--border-color);
  }
 
  thead:first-child tr:first-child th,

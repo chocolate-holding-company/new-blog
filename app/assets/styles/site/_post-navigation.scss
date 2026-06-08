@@ -15,16 +15,16 @@
   align-items: center;
   gap: $spacing-xs;
   padding: 5px 10px;
-  border: 2px solid $primary-color;
-  color: $primary-color;
+  border: 2px solid $primary;
+  color: $primary;
   border-radius: $border-radius;
   font-weight: 500;
   font-size: 0.9rem;
   transition: $transition;
 
   &:hover {
-   background: color.adjust($primary-color, $lightness: -5%);
-   color: $text-light;
+   background: color.adjust(red, $lightness: -5%);
+   color: white;
    transform: translateX(-4px);
   }
 

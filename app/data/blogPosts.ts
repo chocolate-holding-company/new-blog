@@ -106,7 +106,7 @@ export const blogPosts = [
   title: "Pedal to Israel",
   description:
    "Historians distinguish between the Jesus of history, a real man in 1st-century Judea, and the Christ of faith, the divine figure of Christian theology",
-  image: "/images/israel-header.png",
+  image: "/images/israel-header-image.webp",
   category: "Routes",
   date: "2026-01-24",
  },

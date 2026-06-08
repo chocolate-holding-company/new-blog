@@ -10,7 +10,7 @@
  display: flex;
  align-items: center;
  justify-content: center;
- z-index: 1000;
+ z-index: 10004;
  padding: $spacing-sm;
  animation: fadeIn 0.4s ease-in-out;
  @include media(600) {
@@ -40,7 +40,7 @@
 
  @media (max-width: 700px) {
   padding: 0;
-  background: $text-light;
+  background: white;
  }
 }
 
@@ -61,7 +61,7 @@
  right: $spacing-sm;
  background: none;
  border: none;
- color: $text-dark;
+ color: #3333;
  cursor: pointer;
  padding: $spacing-xs;
  display: flex;
@@ -71,7 +71,7 @@
  transition: $transition;
 
  &:hover {
-  background-color: $secondary-color;
+  background-color: $secondary;
  }
 }
 //stop the page srolling when modal open
