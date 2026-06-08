@@ -110,4 +110,13 @@ export const blogPosts = [
   category: "Routes",
   date: "2026-01-24",
  },
+  {
+  _path: "/blog/iphone",
+  title: "The New Iphone Page",
+  description:
+   "this is the new page from the iphone and its bloody hard work. but if you was travelling you wouldnt need to take the laptop",
+  image: "/images/iPhone.png",
+  category: "Advanced",
+  date: "2026-06-11",
+ },
 ];
