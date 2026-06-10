@@ -21,7 +21,7 @@
      &copy; {{ currentYear }} Hill Walking Made Easy |
      <a
       class="text-neutral-100 opacity-80 transition-(--transition) hover:opacity-100 hover:text-(--primary)"
-      -href="#"
+      href="#"
       @click.prevent="showContactModal = true"
       >Contact Us</a
      >

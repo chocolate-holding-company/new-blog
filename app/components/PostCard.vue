@@ -36,7 +36,11 @@ onMounted(() => {
  <article
   ref="cardRef"
   class="post-card bg-(--card-bg) rounded-(--border-radius) overflow-hidden"
-  :style="{ '--delay': index % 3 }"
+  :class="[
+   index % 3 === 0 ? 'delay-0' : '',
+   index % 3 === 1 ? 'delay-150' : '',
+   index % 3 === 2 ? 'delay-300' : '',
+  ]"
   @click="navigateTo(post._path)"
  >
   <div class="post-image relative h-60 overflow-hidden">
@@ -102,7 +106,6 @@ onMounted(() => {
  transition:
   opacity 0.8s cubic-bezier(0.2, 1, 0.3, 1),
   transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
- transition-delay: calc(var(--delay) * 0.15s);
 }
 
 .post-card.reveal-active {
