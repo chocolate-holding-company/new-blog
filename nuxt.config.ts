@@ -23,7 +23,10 @@ export default defineNuxtConfig({
    firebaseAppId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID,
   },
  },
- modules: ["@nuxt/content", "@vueuse/nuxt"],
+ modules: ["@nuxt/content", "@vueuse/nuxt", "@nuxtjs/color-mode"],
+ colorMode: {
+  classSuffix: "", // Tailwind v4 looks for class="dark", not class="dark-mode"
+ },
  css: ["~/assets/css/main.css"],
  vite: {
   plugins: [tailwindcss()],

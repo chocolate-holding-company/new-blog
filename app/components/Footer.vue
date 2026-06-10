@@ -1,11 +1,11 @@
 <template>
  <footer
-  class="bg-neutral-700 py-(--spacing-xl) px-(--spacing-md) mt-(--spacing-xxl)"
+  class="bg-neutral-900 py-(--spacing-xl) px-(--spacing-md) mt-(--spacing-xxl)"
  >
   <div class="container">
    <div class="footer-content">
     <div>
-     <h3 class="text-(--primary) mb-(--spacing-sm) text-[1.25rem]">
+     <h3 class="text-rose-800 mb-(--spacing-sm) text-[1.25rem]">
       Hill Walking Made Easy
      </h3>
      <p class="mb-(--spacing-sm) opacity-90 text-neutral-100">

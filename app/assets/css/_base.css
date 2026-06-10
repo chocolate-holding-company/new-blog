@@ -47,7 +47,8 @@
 
  mark,
  ins {
-  background: rgb(221, 215, 215);
+  background: rgb(205, 144, 144);
+  color: rgb(245, 237, 237);
   text-decoration: none;
  }
 
@@ -118,7 +119,7 @@
  textarea {
   width: 100%;
   padding: 14px 18px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--aux-border);
   border-radius: var(--border-radius);
   font-size: 1rem;
   font-family: var(--font);

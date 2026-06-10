@@ -19,7 +19,7 @@ const postId = computed(() => route.path);
      <article class="post">
       <PostHeader />
       <div class="container">
-       <div class="prose table-custom post-content">
+       <div class="prose max-w-[960px] table-custom post-content">
         <transition name="fade" mode="out-in">
          <ContentRenderer v-if="page" :value="page" />
         </transition>

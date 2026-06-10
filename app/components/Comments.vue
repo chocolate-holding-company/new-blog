@@ -18,7 +18,9 @@ const handleComment = async () => {
 
 <template>
  <section class="comments-container">
-  <h3 class="comments-title">Comments ({{ comments.length }})</h3>
+  <h3 class="comments-title text-(--main-text)">
+   Comments ({{ comments.length }})
+  </h3>
 
   <div v-if="comments.length > 0" class="comments-list">
    <div v-for="c in comments" :key="c.id" class="comment-card">
@@ -37,11 +39,11 @@ const handleComment = async () => {
       }}
      </span>
     </div>
-    <p class="comment-text">{{ c.content }}</p>
+    <p class="comment-text text-(--aux-text)">{{ c.content }}</p>
 
     <div v-if="c.adminReply" class="admin-reply-box">
      <span class="admin-label">Admin Response</span>
-     <p class="admin-text">{{ c.adminReply }}</p>
+     <p class="admin-text text-(--aux-text)">{{ c.adminReply }}</p>
     </div>
    </div>
   </div>
@@ -51,7 +53,7 @@ const handleComment = async () => {
   </p>
 
   <div class="comment-form-wrapper">
-   <h4>Leave a Comment</h4>
+   <h4 class="text-(--aux-text)">Leave a Comment</h4>
    <form @submit.prevent="handleComment">
     <input v-model="form.fax" type="text" class="hidden-field" tabindex="-1" />
 
@@ -73,8 +75,8 @@ const handleComment = async () => {
      {{ loading ? "Posting..." : "Post Comment" }}
     </button>
 
-    <p v-if="error" class="message error-message">{{ error }}</p>
-    <p v-if="success" class="message success-message">
+    <p v-if="error" class="message mx-auto error-message">{{ error }}</p>
+    <p v-if="success" class="message mx-auto success-message">
      Thanks! Sent for moderation.
     </p>
    </form>
@@ -86,7 +88,7 @@ const handleComment = async () => {
 .comments-container {
  margin-top: 3rem;
  padding-top: 2rem;
- border-top: 1px solid #e2e8f0;
+ border-top: 1px solid var(--aux-border);
 
  @media (min-width: 680px) {
   width: 700px;
@@ -105,10 +107,10 @@ const handleComment = async () => {
  }
 
  .comment-card {
-  background: #ffffff;
+  background: var(--aux-bg);
   padding: 1.35rem;
   border-radius: 8px;
-  border: 1px solid #edf2f7;
+  border: 1px solid var(--aux-border);
   margin-bottom: 1.6rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
  }
@@ -158,18 +160,13 @@ const handleComment = async () => {
 
  .form-group {
   margin-bottom: 1.5rem;
+  color: var(--aux-text);
  }
  .submit-btn {
   margin-left: auto;
   margin-right: auto;
   /* display: block; */
-  padding: var(--spacing-xs) var(--spacing-sm);
-  font-size: 0.9rem;
-
-  @media (min-width: 700px) {
-   padding: var(--spacing-sm) var(--spacing-md);
-   font-size: 1rem;
-  }
+  padding: 10px 12px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -185,6 +182,7 @@ const handleComment = async () => {
   padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
+  max-width: 400px;
  }
 
  .error-message {

@@ -14,8 +14,20 @@
  --main-text: var(--color-slate-700);
  --text-light: #ffffff;
  --card-bg: #f9f9f9;
+ --card-text: var(--color-slate-700);
+ --fade-text: var(--color-slate-600);
  --border-color: #e5e7eb;
  --accent: #3b82f6;
+ --aux-bg: var(--color-slate-100);
+ --aux-text: var(--color-slate-800);
+ --aux-border: var(--color-slate-300);
+ --table-hover: var(--color-slate-200);
+ --blockquote-bg: var(--color-red-50);
+ --link: var(--color-rose-800);
+ --link-hover: var(--color-rose-400);
+
+ /* prose */
+ --color-post-text: var(--color-slate-800);
 
  --primary: var(--color-rose-800);
  --second: var(--color-slate-50);
@@ -75,4 +87,17 @@
 
  --animate-fade-in: fade-in 0.4s ease-in-out;
  --animate-slide-up: slide-up 0.3s ease;
+}
+
+.dark {
+ --bg-color: var(--color-neutral-900);
+ --main-text: var(--color-slate-100);
+ --primary: var(--color-sky-900);
+ --card-bg: var(--color-neutral-800);
+ --card-text: var(--color-cyan-50);
+ --table-hover: var(--color-slate-500);
+ --blockquote-bg: var(--color-sky-700);
+ --fade-text: var(--color-slate-200);
+ --link: var(--color-sky-600);
+ --link-hover: var(--color-sky-400);
 }

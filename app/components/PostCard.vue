@@ -56,11 +56,13 @@ onMounted(() => {
    <h3 class="mb-(--spacing-sm) text-[1.25rem]">
     {{ post.title }}
    </h3>
-   <p class="post-description text-[#383737] text-[0.95rem] overflow-hidden">
+   <p
+    class="post-description text-(--card-text) text-[0.95rem] overflow-hidden"
+   >
     {{ post.description }}
    </p>
    <div
-    class="text-[0.875rem] text-[#999] pt-(--spacing-sm) border-t-2 border-t-solid border-t-(--secondary) font-medium"
+    class="text-[0.875rem] text-(--card-text) pt-(--spacing-sm) border-t-2 border-t-solid border-t-slate-200 font-medium"
    >
     <span class="post-date">{{ formatDate(post.date) }}</span>
    </div>

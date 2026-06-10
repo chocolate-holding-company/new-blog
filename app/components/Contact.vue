@@ -61,7 +61,7 @@ const handleSubmit = async () => {
     <p v-if="errors.message" class="err-text">{{ errors.message }}</p>
    </div>
 
-   <button :disabled="loading" class="btn btn-primary">
+   <button :disabled="loading" class="btn but-primary">
     <span v-if="loading"> <BaseSpinner /> Submitting... </span>
     <span v-else> Submit </span>
    </button>
@@ -104,12 +104,7 @@ const handleSubmit = async () => {
 /* Buttons */
 .btn {
  margin-top: 1.5rem;
- padding: var(--spacing-xs) var(--spacing-sm);
- /* font-size: 0.9rem; */
- @media (min-width: 700px) {
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-size: 1rem;
- }
+ padding: 8px 10px;
 }
 .btn:disabled {
  background-color: #94a3b8;

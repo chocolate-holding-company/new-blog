@@ -1,5 +1,5 @@
 @utility but-primary {
- @apply border-2 border-solid border-(--primary) text-sm rounded-lg font-medium tracking-[1px] transition-all duration-200;
+ @apply border-2 border-solid border-(--primary) text-(--primary) text-sm rounded-lg font-medium tracking-[1px] transition-all duration-200;
 
  &:hover {
   @apply bg-(--primary) text-amber-100 scale-105;
@@ -28,14 +28,14 @@
 
  @media (hover: hover) {
   & tbody tr:hover td {
-   @apply bg-slate-200;
+   @apply bg-(--table-hover);
   }
  }
 }
 
 @utility table-striped {
  & tbody tr:nth-child(odd) td {
-  @apply bg-slate-200;
+  @apply bg-(--table-hover);
  }
 }
 
@@ -137,7 +137,7 @@ body.no-scroll {
 }
 
 @utility menu-overlay {
- @apply fixed overflow-y-scroll text-center inset-s-[70px] inset-x-0 inset-e-0 w-screen h-screen bg-[#333333];
+ @apply fixed overflow-y-scroll text-center inset-x-0 inset-e-0 w-screen h-screen bg-[#333333];
 }
 
 @utility menu-links {
@@ -232,7 +232,7 @@ body.no-scroll {
 }
 
 @utility post-description {
- @apply text-xl mb-(--spacing-md) opacity-95;
+ @apply text-xl text-white mb-(--spacing-md) opacity-95;
 
  @media (max-width: 640px) {
   @apply text-[1.05rem];
@@ -243,25 +243,25 @@ body.no-scroll {
  @apply text-[0.95rem] opacity-90 font-medium;
 }
 
-@utility post-content {
- @apply max-w-[960px] mx-auto py-(--spacing-xl) px-0 border-b border-[#333] mb-(--spacing-lg);
+/* @utility post-content {
+ @apply mx-auto py-(--spacing-xl) px-0 border-b border-[#333] mb-(--spacing-lg); */
 
- /* & :is(h1, h2, h3, h4, h5, h6) {
+/* & :is(h1, h2, h3, h4, h5, h6) {
   color: var(--text-dark);
   margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-sm);
  } */
 
- /* & h1 {
+/* & h1 {
   @apply border-b-2 border-solid border-(--primary) pb-(--spacing-sm);
  } */
 
- /* & h2 {
+/* & h2 {
  }
  & h3 {
  } */
 
- /* & p {
+/* & p {
   @apply mb-(--spacing-md) leading-[1.5] text-[#444];
 
   @media (min-width: 700px) {
@@ -269,21 +269,21 @@ body.no-scroll {
   }
  } */
 
- /* & strong {
+/* & strong {
   @apply font-semibold text-[#333];
  }
  & em {
   @apply italic;
  } */
 
- & a {
+/* & a {
   @apply text-(--primary) underline;
   &:hover {
    color: color-mix(in srgb, red 90%, black);
   }
- }
+ } */
 
- & .intro-para {
+/* & .intro-para {
   @apply border-y-2 border-solid border-blue-600 pt-[25px] px-[10px] pb-0 my-(--spacing-sm) mx-0;
 
   @media (min-width: 700px) {
@@ -296,9 +296,9 @@ body.no-scroll {
     @apply text-[1.4rem];
    }
   }
- }
+ } */
 
- /* & :is(figure, img) {
+/* & :is(figure, img) {
   @apply my-(--spacing-lg) mx-0;
   @media (min-width: 700px) {
    @apply my-(--spacing-xl) mx-0;
@@ -312,7 +312,7 @@ body.no-scroll {
   @apply text-center mt-(--spacing-sm) italic;
  } */
 
- /* & :is(ul, ol) {
+/* & :is(ul, ol) {
   @apply mb-(--spacing-md) pl-(--spacing-lg);
   & li {
    @apply mb-(--spacing-xs) leading-[1.8] text-[#444];
@@ -336,11 +336,11 @@ body.no-scroll {
   }
  } */
 
- & blockquote {
+/* & blockquote {
   @apply border-l-4 border-solid border-(--primary) pl-(--spacing-md) my-(--spacing-xl) mx-0 italic text-[#666];
- }
+ } */
 
- /* & hr {
+/* & hr {
   @apply my-12 mx-5 border-0 h-[1px] bg-[#bfbfbf] relative overflow-visible;
   box-shadow: #fff 0 0 0 5px;
 
@@ -350,6 +350,56 @@ body.no-scroll {
    box-shadow: #fff 0 0 0 8px;
   }
  } */
+/* } */
+
+@utility post-content {
+ @apply mx-auto py-(--spacing-xl) border-b border-[#333] mb-(--spacing-lg);
+
+ &.prose {
+  /* 1. Light Mode Variables */
+  --tw-prose-body: var(--color-main-text);
+  --tw-prose-bold: var(--color-main-text);
+  --tw-prose-headings: var(--color-post-headings);
+  --tw-prose-code: var(--color-main-text);
+
+  /* 2. Explicit Element Nesting */
+  & h1,
+  & h2,
+  & h3 {
+   @apply font-bold tracking-tight;
+  }
+
+  & p {
+   @apply text-p-fluid;
+  }
+
+  & img {
+   @apply mx-auto;
+  }
+
+  & a {
+   @apply text-(--link);
+  }
+  & a:hover {
+   @apply text-(--link-hover);
+  }
+
+  & figcaption {
+   @apply text-center text-(--fade-text);
+  }
+
+  & blockquote {
+   @apply border-l-4 border-(--primary) bg-(--blockquote-bg) py-1;
+  }
+ }
+}
+
+/* 3. Dark Mode Overrides (Separated for selector clarity) */
+@variant dark {
+ .post-content {
+  /* --tw-prose-links: var(--color-pink-400);
+  --tw-prose-code: var(--color-slate-700); */
+ }
 }
 
 /* ==========================================
