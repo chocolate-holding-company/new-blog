@@ -58,18 +58,14 @@
 }
 
 @utility modal-content {
- @apply bg-[#f9fafb] rounded-(--border-radius) px-(--spacing-lg) py-(--spacing-xl) max-w-[600px] w-full max-h-[90vh] overflow-y-auto relative animate-(--animate-slide-up);
-
- @media (max-width: 700px) {
-  @apply p-0 bg-white;
- }
+ @apply bg-slate-700 rounded-(--border-radius) px-(--spacing-lg) py-(--spacing-xl) max-w-[600px] w-full max-h-[90vh] overflow-y-auto relative animate-(--animate-slide-up);
 }
 
 @utility close-button {
- @apply absolute top-(--spacing-sm) right-(--spacing-sm) bg-transparent border-none text-[#3333] cursor-pointer p-(--spacing-xs) flex items-center justify-center rounded-full transition-(--transition);
+ @apply absolute top-(--spacing-sm) right-(--spacing-sm) bg-transparent border-none text-slate-50 cursor-pointer p-(--spacing-xs) flex items-center justify-center rounded-full transition-(--transition);
 
  &:hover {
-  @apply bg-(--second);
+  @apply bg-(--second) text-slate-700;
  }
 }
 

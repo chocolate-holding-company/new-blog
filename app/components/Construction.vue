@@ -20,15 +20,15 @@
     </svg>
    </div>
 
-   <h1 class="text-4xl font-bold tracking-tight text-page-text sm:text-5xl">
+   <h1 class="text-4xl font-bold tracking-tight text-(--main-text) sm:text-5xl">
     bylucas is <span class="text-indigo-600">tinkering.</span>
    </h1>
 
-   <p class="mt-6 text-lg leading-8 text-muted-text">
+   <p class="mt-6 text-lg leading-8 text-(--main-text) px-5">
     The labs at
-    <span class="font-semibold text-page-text">bylucas.org</span> are currently
-    active. I'm running some final stress tests and squashing the last few bugs
-    to make sure everything is pixel-perfect.
+    <span class="font-semibold text-(--main-text)">bylucas.org</span> are
+    currently active. I'm running some final stress tests and squashing the last
+    few bugs to make sure everything is pixel-perfect.
    </p>
 
    <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -41,7 +41,7 @@
        class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
       ></span>
      </span>
-     <span class="text-muted-text">Tests currently passing</span>
+     <span class="text-(--main-text)">Tests currently passing</span>
     </div>
    </div>
   </div>

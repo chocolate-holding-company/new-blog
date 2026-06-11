@@ -50,7 +50,9 @@
      </div>
     </div>
 
-    <div class="posts-grid">
+    <div
+     class="grid grid-cols-1 justify-items-center gap-md mb-xl sm:grid-cols-[repeat(auto-fill,minmax(350px,1fr))] sm:gap-lg sm:mb-xl w-full"
+    >
      <PostCard
       v-for="(post, index) in displayedPosts"
       :key="post._path"
@@ -167,7 +169,7 @@ useHead({
  color: white;
  border-color: var(--primary);
 }
-.posts-grid {
+/* .posts-grid {
  display: grid;
  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
  gap: var(--spacing-lg);
@@ -179,5 +181,5 @@ useHead({
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
  }
-}
+} */
 </style>

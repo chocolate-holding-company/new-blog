@@ -35,7 +35,7 @@ onMounted(() => {
 <template>
  <article
   ref="cardRef"
-  class="post-card bg-(--card-bg) rounded-(--border-radius) overflow-hidden"
+  class="post-card w-full sm:max-w-none bg-(--card-bg) rounded-(--border-radius) overflow-hidden"
   :class="[
    index % 3 === 0 ? 'delay-0' : '',
    index % 3 === 1 ? 'delay-150' : '',
@@ -78,7 +78,6 @@ onMounted(() => {
 .post-card {
  cursor: pointer;
  box-shadow: 0 2px 8px var(--shadow);
- cursor: pointer;
  transition: var(--transition);
  animation: fadeIn 0.5s ease;
 }

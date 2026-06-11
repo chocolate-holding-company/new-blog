@@ -20,10 +20,10 @@ const handleSubmit = async () => {
 
 <template>
  <div
-  class="form-wrapper my-(--spacing-md) mx-auto p-(--spacing-lg) bg-(--text-light)"
+  class="form-wrapper my-(--spacing-md) mx-auto bg-slate-700 sm:p-(--spacing-lg)"
  >
-  <h2 class="text-(--primary) mb-(--spacing-sm)">Contact Us</h2>
-  <p class="text-(--main-text) mb-(--spacing-sm text-[1.1rem])">
+  <h2 class="text-slate-50 mb-(--spacing-sm)">Contact Us</h2>
+  <p class="text-slate-100 mb-(--spacing-sm text-[1.1rem])">
    Have a question or want to get in touch?<br />Fill out the form below.
   </p>
   <form @submit.prevent="handleSubmit">
@@ -36,7 +36,7 @@ const handleSubmit = async () => {
      v-model="form.name"
      type="text"
      placeholder="Name"
-     class="input-field"
+     class="input-field text-slate-600"
     />
     <p v-if="errors.name" class="err-text">{{ errors.name }}</p>
    </div>
@@ -46,7 +46,7 @@ const handleSubmit = async () => {
      v-model="form.email"
      type="text"
      placeholder="Email"
-     class="input-field"
+     class="input-field text-slate-600"
     />
     <p v-if="errors.email" class="err-text">{{ errors.email }}</p>
    </div>
@@ -56,12 +56,12 @@ const handleSubmit = async () => {
      v-model="form.message"
      placeholder="Message..."
      rows="4"
-     class="input-field"
+     class="input-field text-slate-600"
     ></textarea>
     <p v-if="errors.message" class="err-text">{{ errors.message }}</p>
    </div>
 
-   <button :disabled="loading" class="btn but-primary">
+   <button :disabled="loading" class="btn">
     <span v-if="loading"> <BaseSpinner /> Submitting... </span>
     <span v-else> Submit </span>
    </button>
@@ -87,6 +87,12 @@ const handleSubmit = async () => {
  font-size: 0.95rem !important;
  font-weight: 500;
  margin-top: 4px;
+ background-color: white;
+ border-radius: 3px;
+ padding: 8px 10px;
+ width: 260px;
+ margin-left: auto;
+ margin-right: auto;
 }
 .toast {
  background: var(--success-color);
@@ -103,8 +109,16 @@ const handleSubmit = async () => {
 
 /* Buttons */
 .btn {
- margin-top: 1.5rem;
- padding: 8px 10px;
+ margin-top: 1rem;
+ padding: 8px 12px;
+ border: 2px solid #3b82f6;
+ border-radius: 8px;
+ font-size: 0.9rem;
+ color: white;
+}
+
+.btn:hover {
+ background-color: #3b82f6;
 }
 .btn:disabled {
  background-color: #94a3b8;
