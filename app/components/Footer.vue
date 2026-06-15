@@ -1,6 +1,6 @@
 <template>
  <footer
-  class="bg-neutral-900 py-(--spacing-xl) px-(--spacing-md) mt-(--spacing-xxl)"
+  class="bg-neutral-900 py-(--spacing-xl) px-(--spacing-md) mt-(--spacing-sm)"
  >
   <div class="container">
    <div class="footer-content">

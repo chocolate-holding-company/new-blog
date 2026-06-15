@@ -21,16 +21,9 @@
  align-items: center;
  gap: var(--spacing-xs);
  padding: 5px 10px;
- /* border: 2px solid var(--primary); */
- /* color: var(--primary); */
- /* border-radius: var(--border-radius);
- font-weight: 500;
- font-size: 0.9rem; */
  transition: var(--transition);
 
  &:hover {
-  /* background: color-mix(in srgb, red 95%, black); */
-  /* color: white; */
   transform: translateX(-4px);
  }
 
@@ -38,58 +31,6 @@
  & svg {
   transition: var(--transition);
  }
-}
-
-@utility newsletter-wrapper {
- /* max-width: 700px;
- margin: 0 auto var(--spacing-xxl) auto;
- padding: 48px 32px;
- background: #f9fafb;
- border-radius: 16px;
- text-align: center;
- box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); */
-
- & h3 {
-  /* color: #111827;
-  margin-bottom: 12px;
-  font-weight: 700; */
- }
-
- & description {
-  /* margin-bottom: 24px;
-  font-size: 1.1rem; */
- }
-
- & form {
-  /* display: flex;
-  flex-direction: column;
-  gap: var(spacing-lg);
-  align-items: center; */
- }
-
- & input-group {
-  /* display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  justify-content: center; */
- }
-
- & input[type="email"] {
-  /* width: 100%;
-  margin-top: 8px; */
- }
-
- & p {
-  /* margin-top: 25px;
-  font-size: 1rem;
-  font-weight: 500; */
- }
- /* Mobile Responsiveness */
- /* @media (min-width: 480px) {
-  & input[type="email"] {
-   max-width: 350px;
-  }
- } */
 }
 
 /* Page fade transition for entering/exiting post pages */

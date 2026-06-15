@@ -16,7 +16,7 @@
  --card-bg: #f9f9f9;
  --card-text: var(--color-slate-700);
  --fade-text: var(--color-slate-600);
- --border-color: #e5e7eb;
+ --border-color: var(--color-slate-300);
  --accent: #3b82f6;
  --aux-bg: var(--color-slate-100);
  --aux-text: var(--color-slate-800);
@@ -92,12 +92,13 @@
 .dark {
  --bg-color: var(--color-neutral-900);
  --main-text: var(--color-slate-100);
- --primary: var(--color-sky-900);
+ --primary: var(--color-sky-600);
  --card-bg: var(--color-neutral-800);
  --card-text: var(--color-cyan-50);
  --table-hover: var(--color-slate-500);
- --blockquote-bg: var(--color-sky-700);
+ --blockquote-bg: var(--color-sky-900);
  --fade-text: var(--color-slate-200);
  --link: var(--color-sky-600);
  --link-hover: var(--color-sky-400);
+ --border-color: var(--color-slate-100);
 }

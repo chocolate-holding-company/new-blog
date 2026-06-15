@@ -14,8 +14,8 @@ const postId = computed(() => route.path);
   <ReadingProgressBar />
   <NavBar />
   <div class="min-h-screen flex flex-col" id="main-content">
-   <main class="flex-1">
-    <div class="mb-24">
+   <main class="flex-1 mb-15">
+    <div class="mb-5">
      <article class="post">
       <PostHeader />
       <div class="container">

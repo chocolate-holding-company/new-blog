@@ -86,9 +86,9 @@ const handleComment = async () => {
 
 <style scoped>
 .comments-container {
- margin-top: 3rem;
+ margin-top: 4rem;
  padding-top: 2rem;
- border-top: 1px solid var(--aux-border);
+ border-top: 1px solid var(--border-color);
 
  @media (min-width: 680px) {
   width: 700px;
@@ -111,7 +111,7 @@ const handleComment = async () => {
   padding: 1.35rem;
   border-radius: 8px;
   border: 1px solid var(--aux-border);
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
  }
 
@@ -134,11 +134,14 @@ const handleComment = async () => {
 
  .admin-reply-box {
   margin-top: 1rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   padding: 1rem;
   background-color: #ebf8ff;
   border-left: 4px solid #3182ce;
   border-radius: 4px;
+  @media (min-width: 760px) {
+   margin-left: 1.5rem;
+  }
  }
 
  .admin-label {
@@ -159,7 +162,7 @@ const handleComment = async () => {
  }
 
  .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--aux-text);
  }
  .submit-btn {
