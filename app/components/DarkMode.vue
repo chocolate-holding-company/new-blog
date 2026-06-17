@@ -5,7 +5,7 @@
   class="cursor-pointer block mx-auto mb-5 rounded-lg p-2.5 bg-slate-500 text-slate-200 hover:bg-slate-300 hover:text-slate-700 focus:outline-hidden"
   aria-label="Toggle dark mode"
  >
-  <span v-if="!colorMode.unknown">
+  <span v-if="colorMode.value">
    <svg
     v-if="colorMode.value === 'light'"
     class="h-5 w-5"

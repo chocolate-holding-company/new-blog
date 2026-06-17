@@ -5,11 +5,6 @@ export default defineNuxtConfig({
   compatibilityVersion: 4,
  },
  compatibilityDate: "2025-07-15",
- app: {
-  head: {
-   script: [{ src: "/theme-check.js" }],
-  },
- },
  devtools: { enabled: true },
  plugins: ["./plugins/firebase.client.ts"],
  runtimeConfig: {

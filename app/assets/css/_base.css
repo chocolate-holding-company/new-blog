@@ -121,6 +121,7 @@
   padding: 14px 18px;
   border: 1px solid var(--aux-border);
   border-radius: var(--border-radius);
+  color: var(--aux-text);
   font-size: 1rem;
   font-family: var(--font);
   background: white;
@@ -129,7 +130,8 @@
    box-shadow 0.2s;
  }
 
- .input-field:focus {
+ input:focus,
+ textarea:focus {
   outline: none;
   border-color: #3b82f6;
   border-width: 2px;

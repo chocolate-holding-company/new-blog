@@ -163,7 +163,6 @@ const handleComment = async () => {
 
  .form-group {
   margin-bottom: 2rem;
-  color: var(--aux-text);
  }
  .submit-btn {
   margin-left: auto;

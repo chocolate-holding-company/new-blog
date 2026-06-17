@@ -1,11 +1,18 @@
-export const blogPosts = [
+export interface BlogPost {
+ _path: string;
+ title: string;
+ description: string;
+ image: string;
+ category: string;
+ date: string;
+}
+
+export const blogPosts: BlogPost[] = [
  {
   _path: "/blog/markdown-guide",
   title: "A Guide to Markdown",
   description:
    "Markdown guide showing all the tags and goodness of Markdown and why you should use it for all your blog writing.",
-  seo_description:
-   "Markdown guide showing all the tags and goodness of Markdown this is seo description.",
   image:
    "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Beginner",
@@ -41,7 +48,6 @@ export const blogPosts = [
    "https://images.pexels.com/photos/4662343/pexels-photo-4662343.jpeg?auto=compress&cs=tinysrgb&w=800",
   category: "Fitness",
   date: "2024-11-05",
-  author: "James Wilson",
  },
  {
   _path: "/blog/navigation-skills-for-hill-walkers",

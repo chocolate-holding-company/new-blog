@@ -131,19 +131,43 @@ const loadMore = async () => {
  isLoading.value = false;
 };
 
+const siteRoot = "https://bylucas.org";
+
+useSeoMeta({
+ title: "Home | ByLucas",
+ description:
+  "A personal collection of long-distance hiking routes, cycling adventures, and web development references.",
+
+ // Open Graph
+ ogTitle: "Home | ByLucas",
+ ogDescription:
+  "A personal collection of long-distance hiking routes, cycling adventures, and web development references.",
+ ogType: "website",
+ ogUrl: siteRoot,
+ ogImage: `${siteRoot}/images/default-share.webp`, // Your primary brand share image
+
+ // Twitter Card
+ twitterCard: "summary_large_image",
+ twitterTitle: "Home | ByLucas",
+ twitterDescription:
+  "A personal collection of long-distance hiking routes, cycling adventures, and web development references.",
+ twitterImage: `${siteRoot}/images/default-share.webp`,
+});
+
 useHead({
- title: "Hill Walking Made Easy",
- meta: [{ name: "description", content: "Expert guides for hill walking." }],
+ htmlAttrs: {
+  lang: "en",
+ },
+ link: [
+  {
+   rel: "canonical",
+   href: siteRoot,
+  },
+ ],
 });
 </script>
+
 <style>
-/* .hero {
- background: linear-gradient(
-  to bottom,
-  color-mix(in srgb, var(--primary) 30%, transparent) 0%,
-  color-mix(in srgb, color-mix(in srgb, red 90%, black) 70%, transparent) 100%
-);
-} */
 .hero-title {
  animation: fadeInUp 0.8s ease;
 }
@@ -169,17 +193,4 @@ useHead({
  color: white;
  border-color: var(--primary);
 }
-/* .posts-grid {
- display: grid;
- grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
- gap: var(--spacing-lg);
- margin-bottom: var(--spacing-xl);
-}
-
-@media (max-width: var(--breakpoint-mobile)) {
- .post-grid {
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
- }
-} */
 </style>

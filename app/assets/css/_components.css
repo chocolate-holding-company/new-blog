@@ -377,6 +377,11 @@ body.no-scroll {
    @apply border-l-4 border-(--primary) bg-(--blockquote-bg) py-1;
   }
 
+  & li::marker {
+   color: red;
+   font-size: 1.4em;
+  }
+
   & hr {
    @apply my-12 mx-5 border-0 h-[1px] bg-(--border-color) relative overflow-visible;
    box-shadow: var(--bg-color) 0 0 0 5px;

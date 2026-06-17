@@ -14,7 +14,7 @@ const onSubscribe = async () => {
   class="max-w-[700px] mx-auto mb-(--spacing-xxl) py-[48px] px-[32px] bg-(--aux-bg) border border-(--aux-border) rounded-lg text-center shadow-lg sm:py-[60px] sm:px-[72px]"
  >
   <h3 class="text-(--aux-text) mb-8 font-bold">Join our inner circle</h3>
-  <p class="text-(--aux-text) mb-16 text-lg">
+  <p class="text-(--aux-text) mb-6 text-lg">
    Get curated insights and weekly updates delivered straight to your inbox.
   </p>
 
@@ -26,7 +26,7 @@ const onSubscribe = async () => {
     required
     aria-label="Email address"
     placeholder="Enter your email"
-    class="mb-6 text-(--aux-text) max-w-full"
+    class="mb-2"
    />
    <button :disabled="loading" class="but-primary mx-auto w-40 py-2 px-3">
     <span v-if="loading"> <BaseSpinner /> Submitting... </span>
