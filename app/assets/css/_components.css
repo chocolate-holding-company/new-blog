@@ -239,106 +239,8 @@ body.no-scroll {
  @apply text-[0.95rem] opacity-90 font-medium;
 }
 
-/* @utility post-content {
- @apply mx-auto py-(--spacing-xl) px-0 border-b border-[#333] mb-(--spacing-lg); */
-
-/* & :is(h1, h2, h3, h4, h5, h6) {
-  color: var(--text-dark);
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
- } */
-
-/* & h1 {
-  @apply border-b-2 border-solid border-(--primary) pb-(--spacing-sm);
- } */
-
-/* & h2 {
- }
- & h3 {
- } */
-
-/* & p {
-  @apply mb-(--spacing-md) leading-[1.5] text-[#444];
-
-  @media (min-width: 700px) {
-   @apply leading-[1.6];
-  }
- } */
-
-/* & strong {
-  @apply font-semibold text-[#333];
- }
- & em {
-  @apply italic;
- } */
-
-/* & a {
-  @apply text-(--primary) underline;
-  &:hover {
-   color: color-mix(in srgb, red 90%, black);
-  }
- } */
-
-/* & .intro-para {
-  @apply border-y-2 border-solid border-blue-600 pt-[25px] px-[10px] pb-0 my-(--spacing-sm) mx-0;
-
-  @media (min-width: 700px) {
-   @apply my-(--spacing-lg) mx-(--spacing-md) mb-(--spacing-xxl);
-  }
-
-  & p {
-   @apply text-[1.3rem] italic font-light;
-   @media (min-width: 700px) {
-    @apply text-[1.4rem];
-   }
-  }
- } */
-
-/* & :is(figure, img) {
-  @apply my-(--spacing-lg) mx-0;
-  @media (min-width: 700px) {
-   @apply my-(--spacing-xl) mx-0;
-  }
- }
-
- & figure img {
-  @apply mb-0;
- }
- & figcaption {
-  @apply text-center mt-(--spacing-sm) italic;
- } */
-
-/* & :is(ul, ol) {
-  @apply mb-(--spacing-md) pl-(--spacing-lg);
-  & li {
-   @apply mb-(--spacing-xs) leading-[1.8] text-[#444];
-  }
- }
- & ul {
-  @apply list-disc;
- }
- & ol {
-  @apply list-decimal;
- }
-
- & code {
-  @apply bg-(--second) py-[2px] px-[6px] rounded font-mono text-[0.9em];
- }
-
- & pre {
-  @apply bg-(--second) p-(--spacing-md) rounded-(--border-radius) overflow-x-auto mb-(--spacing-md);
-  & code {
-   @apply bg-transparent p-0;
-  }
- } */
-
-/* & blockquote {
-  @apply border-l-4 border-solid border-(--primary) pl-(--spacing-md) my-(--spacing-xl) mx-0 italic text-[#666];
- } */
-/* } */
-
 @utility post-content {
- @apply mx-auto pb-(--spacing-xl) pt-1 md:pt-3 border-b border-(--border-color) mb-(--spacing-lg);
+ @apply mx-auto pb-(--spacing-xl) border-b border-(--border-color) mb-(--spacing-lg);
 
  &.prose {
   /* 1. Light Mode Variables */
@@ -379,7 +281,7 @@ body.no-scroll {
 
   & li::marker {
    color: red;
-   font-size: 1.4em;
+   font-size: 1em;
   }
 
   & hr {
@@ -390,6 +292,18 @@ body.no-scroll {
     content: "oooo";
     @apply absolute -top-2.5 left-[47%] text-(--border-color) bg-(--bg-color) text-[12px];
     box-shadow: var(--bg-color) 0 0 0 8px;
+   }
+  }
+
+  & .intro-para {
+   @apply border-l border-r border-blue-700 border-4 bg-blue-100 py-2 px-6 mt-10;
+
+   & p {
+    @apply text-sm leading-tight text-blue-600 font-medium mb-1 mt-0;
+   }
+
+   & p:last-child {
+    @apply text-[10px] font-bold mb-0;
    }
   }
  }

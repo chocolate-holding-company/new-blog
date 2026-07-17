@@ -20,14 +20,14 @@ export const blogPosts: BlogPost[] = [
  },
 
  {
-  _path: "/blog/beginners",
-  title: "Beginner's Guide to Hill Walking",
+  _path: "/blog/delhi",
+  title: "Delhi",
   description:
-   "Everything you need to know to start your hill walking journey safely and confidently.",
+   "Delhi an introduction to incredible India, the famous roads, budget hotels, the first real curry, the heat and ooh! that smell, what a culture shock.",
   image:
-   "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=800",
-  category: "Beginner",
-  date: "2024-11-15",
+   "https://images.pexels.com/photos/20083843/pexels-photo-20083843.jpeg?auto=compress&cs=tinysrgb&w=800",
+  category: "India",
+  date: "2026-07-05",
  },
  {
   _path: "/blog/command-line",
@@ -40,24 +40,22 @@ export const blogPosts: BlogPost[] = [
   date: "2024-11-10",
  },
  {
-  _path: "/blog/git-cheat-sheet",
-  title: "Git Cheat-Sheet",
+  _path: "/blog/packing-list",
+  title: "Packing List",
   description:
-   "Build the strength and endurance needed to tackle challenging hill walks with confidence.",
-  image:
-   "https://images.pexels.com/photos/4662343/pexels-photo-4662343.jpeg?auto=compress&cs=tinysrgb&w=800",
-  category: "Fitness",
-  date: "2024-11-05",
+   "Packing for a cycle tour in India takes some planning, we need to be light yet carry all essential clothing and bike tools and fit all into two 20ltr panniers.",
+  image: "/images/packing-two.webp",
+  category: "India",
+  date: "2026-07-06",
  },
  {
-  _path: "/blog/navigation-skills-for-hill-walkers",
-  title: "Navigation Skills for Hill Walkers",
+  _path: "/blog/conclusion",
+  title: "In Conclusion",
   description:
-   "Master the art of map reading and route finding to stay safe on the hills.",
-  image:
-   "https://images.pexels.com/photos/1697912/pexels-photo-1697912.jpeg?auto=compress&cs=tinysrgb&w=800",
-  category: "Safety",
-  date: "2024-10-25",
+   "Cycle problems encountered while touring India included brake and pannier problems. The bike performed well but had a long-standing problem with brake discs.",
+  image: "/images/in-conclusion.webp",
+  category: "India",
+  date: "2026-07-15",
  },
  {
   _path: "/blog/planning-your-first-multi-day-trek",

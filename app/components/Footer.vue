@@ -18,7 +18,18 @@
     class="border-t-solid border-t-2 border-t-neutral-500 pt-(--spacing-md) text-center"
    >
     <p class="m-0 opacity-80 text-[0.9rem] text-neutral-100">
-     &copy; {{ currentYear }} Hill Walking Made Easy |
+     &copy; {{ currentYear }}
+
+     <span v-if="isIndex">bylucas</span>
+
+     <!-- Show link if on any other page -->
+     <a
+      v-else
+      class="text-neutral-100 opacity-80 transition-(--transition) hover:opacity-100 hover:text-(--primary) cursor-pointer"
+      href="/"
+      >bylucas</a
+     >
+     |
      <a
       class="text-neutral-100 opacity-80 transition-(--transition) hover:opacity-100 hover:text-(--primary)"
       href="#"
@@ -46,10 +57,16 @@
 
 <script setup>
 import { ref, watch, onMounted, onBeforeUnmount } from "vue";
+import { useRoute } from "vue-router"; // Imported to check current page route
+const route = useRoute();
+
 const currentYear = new Date().getFullYear();
 defineEmits(["openContact", "openPrivacy"]);
 const showPrivacyModal = ref(false);
 const showContactModal = ref(false);
+
+// Evaluates true if the path is exactly '/' or if the route name is 'index'
+const isIndex = computed(() => route.path === "/" || route.name === "index");
 
 let body = null;
 onMounted(() => {

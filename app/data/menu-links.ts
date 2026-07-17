@@ -32,8 +32,12 @@ export const leftLinks = [
 
 export const rightLinks = [
  {
-  cat: "Gear",
-  links: [{ link: "Command Line Cheat Sheet", link_url: "/blog/command-line" }],
+  cat: "India",
+  links: [
+   { link: "Packing List", link_url: "/blog/packing-list" },
+   { link: "Delhi", link_url: "/blog/delhi" },
+   { link: "In Conclusion", link_url: "/blog/conclusion" },
+  ],
  },
  {
   cat: "Nature",

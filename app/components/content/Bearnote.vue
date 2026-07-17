@@ -54,7 +54,7 @@ const icon = computed(() => {
 .icon {
  font-size: 1.2rem;
  flex-shrink: 0;
- margin-right: 10px;
+ margin-right: 15px;
 }
 
 .content {

@@ -56,7 +56,7 @@ onMounted(() => {
     {{ post.category }}
    </div>
   </div>
-  <div class="p-(--spacing-md)">
+  <div class="px-4 pb-4">
    <h3 class="mb-(--spacing-sm) text-[1.25rem]">
     {{ post.title }}
    </h3>
